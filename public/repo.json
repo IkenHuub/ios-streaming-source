@@ -1,6 +1,6 @@
 {
   "name": "IkenHuub iOS Streaming Source",
-  "identifier": "com.ikenhuub.ios-source",
+  "identifier": "com.ikenhuub.ios-streaming-source",
   "subtitle": "Official iOS app distributions, provided directly by their developers.",
   "description": "A generic AltStore-compatible source for carefully verified official app distributions.",
   "website": "https://github.com/IkenHuub/ios-streaming-source",
