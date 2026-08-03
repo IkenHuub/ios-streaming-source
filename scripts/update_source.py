@@ -178,31 +178,73 @@ def update() -> bool:
     changed = False
 
     for app in config["apps"]:
-        release = latest_release(app["githubRepository"])
+        upstream_version = None
+        ipa_url = None
+        if upstream_url := app.get("upstreamSourceURL"):
+            upstream_source = fetch_json(upstream_url)
+            upstream_bundle = app["upstreamBundleIdentifier"]
+            upstream_app = next(
+                (item for item in upstream_source.get("apps", []) if item.get("bundleIdentifier") == upstream_bundle),
+                None,
+            )
+            if not upstream_app or not upstream_app.get("versions"):
+                raise RuntimeError(f"Upstream source has no versions for {upstream_bundle}")
+            upstream_version = upstream_app["versions"][0]
+            ipa_url = upstream_version["downloadURL"]
+            release = {
+                "id": f"upstream:{upstream_bundle}:{upstream_version['version']}:{upstream_version.get('buildVersion', '')}",
+                "updated_at": upstream_version.get("sha256", ipa_url),
+                "tag_name": upstream_version["version"],
+                "published_at": upstream_version["date"],
+                "body": upstream_version.get("localizedDescription", ""),
+            }
+        else:
+            release = latest_release(app["githubRepository"])
         release_key = f"{release['id']}:{release.get('updated_at', '')}"
         previous = existing_by_name.get(app["name"])
         if state.get(app["id"], {}).get("releaseKey") == release_key and previous:
             generated_apps.append(previous)
             continue
 
-        try:
-            ipa_url = select_ipa_url(
-                release,
-                app.get("allowReleaseBodyIPA", False),
-                app.get("ipaAssetPattern"),
-            )
-        except RuntimeError:
-            if app.get("allowMissingIPA"):
-                if previous:
-                    generated_apps.append(previous)
-                print(f"{app['name']}: latest official release has no IPA; entry remains pending")
-                continue
-            raise
+        if ipa_url is None:
+            try:
+                ipa_url = select_ipa_url(
+                    release,
+                    app.get("allowReleaseBodyIPA", False),
+                    app.get("ipaAssetPattern"),
+                )
+            except RuntimeError:
+                if app.get("allowMissingIPA"):
+                    if previous:
+                        generated_apps.append(previous)
+                    print(f"{app['name']}: latest official release has no IPA; entry remains pending")
+                    continue
+                raise
         ipa_path = download_ipa(ipa_url)
         try:
             metadata = ipa_metadata(ipa_path)
         finally:
             ipa_path.unlink(missing_ok=True)
+
+        if upstream_version:
+            expected_values = {
+                "bundleIdentifier": app["upstreamBundleIdentifier"],
+                "version": upstream_version.get("version"),
+                "buildVersion": upstream_version.get("buildVersion"),
+                "minOSVersion": upstream_version.get("minOSVersion"),
+                "size": upstream_version.get("size"),
+                "sha256": upstream_version.get("sha256"),
+            }
+            mismatches = [
+                key
+                for key, expected in expected_values.items()
+                if expected is not None and metadata[key] != expected
+            ]
+            if mismatches:
+                raise RuntimeError(
+                    f"Upstream metadata does not match downloaded IPA for {app['name']}: "
+                    + ", ".join(mismatches)
+                )
 
         previous = existing_by_bundle.get(metadata["bundleIdentifier"], previous)
         versions = list(previous.get("versions", [])) if previous else []
@@ -213,7 +255,11 @@ def update() -> bool:
                 "version": metadata["version"],
                 "buildVersion": metadata["buildVersion"],
                 "date": release["published_at"],
-                "localizedDescription": release_description(app, release),
+                "localizedDescription": (
+                    upstream_version.get("localizedDescription", "")
+                    if upstream_version
+                    else release_description(app, release)
+                ),
                 "downloadURL": ipa_url,
                 "size": metadata["size"],
                 "sha256": metadata["sha256"],
@@ -225,6 +271,8 @@ def update() -> bool:
                     version=metadata["version"],
                     buildVersion=metadata["buildVersion"],
                 )
+            elif upstream_version and upstream_version.get("marketingVersion"):
+                new_version["marketingVersion"] = upstream_version["marketingVersion"]
             versions.insert(0, new_version)
             changed = True
 

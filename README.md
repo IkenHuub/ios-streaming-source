@@ -23,6 +23,10 @@ APEX is not developed by the maintainer of this repository. The IPA is neither r
 
 The bundle identifier, app version, build version, minimum iOS version, privacy descriptions, file size, and SHA-256 digest are determined directly from the downloaded IPA.
 
+## Stremio
+
+The full-featured Stremio iOS app follows the unofficial [`gorlev/stremio-altstore`](https://github.com/gorlev/stremio-altstore) source published at `https://repo.omix4.one/stremio-ios.json`. The IPA itself is downloaded directly and unmodified from Stremio's public `dl.strem.io` CDN. The updater verifies its bundle identifier, version, build, minimum iOS version, byte size, and SHA-256 digest before publishing it.
+
 ## Nuvio
 
 Official Nuvio is monitored through [`NuvioMedia/NuvioMobile`](https://github.com/NuvioMedia/NuvioMobile). Its current releases do not provide an iOS IPA, so it is intentionally kept out of the published source until a directly downloadable official IPA becomes available.

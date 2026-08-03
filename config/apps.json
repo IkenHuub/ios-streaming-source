@@ -23,6 +23,19 @@
       "allowReleaseBodyIPA": true
     },
     {
+      "id": "stremio",
+      "name": "Stremio",
+      "upstreamSourceURL": "https://repo.omix4.one/stremio-ios.json",
+      "upstreamBundleIdentifier": "com.stremio.pal",
+      "developerName": "Stremio",
+      "subtitle": "Freedom to stream.",
+      "localizedDescription": "Stremio is a modern media center for movies, series, live TV, and web channels. This entry follows the unofficial omix4 AltStore source while downloading the unmodified IPA directly from Stremio's public CDN.",
+      "iconURL": "https://repo.omix4.one/assets/stremio-icon.png",
+      "tintColor": "#7055D9",
+      "category": "entertainment",
+      "entitlements": []
+    },
+    {
       "id": "nuvio",
       "name": "Nuvio",
       "githubRepository": "NuvioMedia/NuvioMobile",
