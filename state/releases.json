@@ -30,5 +30,13 @@
     "version": "0.4.0",
     "buildVersion": "102",
     "sha256": "0fadb39632aefbffcd4cc1c76b1a7a941b70001e8383a3c1ccb3e59056906389"
+  },
+  "youtube-lowiqentity": {
+    "releaseKey": "363874836:2026-08-02T22:30:03Z",
+    "releaseTag": "YouTube/lowiqentity/6.0-21.31",
+    "downloadURL": "https://github.com/lowiqentity/releases/releases/download/YouTube/lowiqentity/6.0-21.31/YouTube_21.31_lowiqentity_6.0.ipa",
+    "version": "21.31.3",
+    "buildVersion": "21.31.3",
+    "sha256": "6ad10f8df25862fea8f2128c77939c5b05e8fe0bafd9d39d30c0cbd272096db4"
   }
 }

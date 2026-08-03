@@ -44,12 +44,17 @@ def fetch_json(url: str):
         return json.load(response)
 
 
-def latest_release(repository: str) -> dict:
+def latest_release(repository: str, tag_prefix: str | None = None) -> dict:
     releases = fetch_json(f"https://api.github.com/repos/{repository}/releases?per_page=30")
     for release in releases:
-        if not release.get("draft") and not release.get("prerelease"):
+        if (
+            not release.get("draft")
+            and not release.get("prerelease")
+            and (tag_prefix is None or release.get("tag_name", "").startswith(tag_prefix))
+        ):
             return release
-    raise RuntimeError(f"No published stable release found for {repository}")
+    qualifier = f" with tag prefix {tag_prefix}" if tag_prefix else ""
+    raise RuntimeError(f"No published stable release found for {repository}{qualifier}")
 
 
 def select_ipa_url(release: dict, allow_body: bool, asset_pattern: str | None = None) -> str:
@@ -201,7 +206,7 @@ def update() -> bool:
                 "body": upstream_version.get("localizedDescription", ""),
             }
         else:
-            release = latest_release(app["githubRepository"])
+            release = latest_release(app["githubRepository"], app.get("releaseTagPrefix"))
         release_key = f"{release['id']}:{release.get('updated_at', '')}"
         previous = existing_by_name.get(app["name"])
         if state.get(app["id"], {}).get("releaseKey") == release_key and previous:

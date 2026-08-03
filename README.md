@@ -30,6 +30,7 @@ https://ikenhuub.github.io/ios-streaming-source/nuvio-full.json
 Every published app also has an individual source hosted by this repository:
 
 - `https://ikenhuub.github.io/ios-streaming-source/apex.json`
+- `https://ikenhuub.github.io/ios-streaming-source/youtube-lowiqentity.json`
 - `https://ikenhuub.github.io/ios-streaming-source/stremio.json`
 - `https://ikenhuub.github.io/ios-streaming-source/nuvio-enhanced.json`
 - `https://ikenhuub.github.io/ios-streaming-source/nuvio-full.json`
@@ -46,6 +47,10 @@ Every published app also has an individual source hosted by this repository:
 APEX is not developed by the maintainer of this repository. The IPA is neither rehosted nor modified. Its download URL points directly to the official Catbox download published by the APEX developer in the official [GitHub Release](https://github.com/lowiqentity/APEX/releases).
 
 The bundle identifier, app version, build version, minimum iOS version, privacy descriptions, file size, and SHA-256 digest are determined directly from the downloaded IPA.
+
+## YouTube by lowiqentity
+
+The legacy-style YouTube build is linked directly and unmodified from [`lowiqentity/releases`](https://github.com/lowiqentity/releases/releases). The developer explicitly marks this IPA as supporting installation only through Feather and LiveContainer. It is included in the main catalog with that warning, but excluded from the AltStore Classic catalogs. Future releases are not guaranteed now that the developer is also working on APEX.
 
 ## Stremio
 

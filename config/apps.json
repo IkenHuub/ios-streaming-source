@@ -37,6 +37,21 @@
       "allowReleaseBodyIPA": true
     },
     {
+      "id": "youtube-lowiqentity",
+      "name": "YouTube by lowiqentity",
+      "githubRepository": "lowiqentity/releases",
+      "releaseTagPrefix": "YouTube/lowiqentity/",
+      "developerName": "lowiqentity",
+      "subtitle": "Legacy lowiqentity YouTube build for Feather and LiveContainer.",
+      "localizedDescription": "An older-style customized YouTube distribution by lowiqentity, retained alongside APEX for users who prefer it. The developer states that this IPA exclusively supports installation through Feather and LiveContainer. Future updates are not guaranteed.",
+      "iconURL": "https://avatars.githubusercontent.com/u/310374126?v=4",
+      "tintColor": "#FF0000",
+      "category": "entertainment",
+      "entitlements": [],
+      "ipaAssetPattern": "\\.ipa$",
+      "isolateHistory": true
+    },
+    {
       "id": "stremio",
       "name": "Stremio",
       "upstreamSourceURL": "https://repo.omix4.one/stremio-ios.json",
