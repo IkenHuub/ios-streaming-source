@@ -7,6 +7,20 @@
     "website": "https://github.com/IkenHuub/ios-streaming-source",
     "tintColor": "#FF0033"
   },
+  "compatibleSources": [
+    {
+      "filename": "altstore-enhanced.json",
+      "name": "IkenHuub iOS Streaming Source — Enhanced",
+      "subtitle": "AltStore-compatible catalog with Nuvio Enhanced.",
+      "appIds": ["apex", "stremio", "nuvio-enhanced"]
+    },
+    {
+      "filename": "altstore-full.json",
+      "name": "IkenHuub iOS Streaming Source — Full",
+      "subtitle": "AltStore-compatible catalog with Nuvio Full.",
+      "appIds": ["apex", "stremio", "nuvio-full"]
+    }
+  ],
   "apps": [
     {
       "id": "apex",

@@ -8,9 +8,18 @@ A generic AltStore-compatible source for (un)official iOS streaming apps. The so
 https://ikenhuub.github.io/ios-streaming-source/apps.json
 ```
 
-An identical compatibility alias is available at `https://ikenhuub.github.io/ios-streaming-source/repo.json`.
+An identical FlareStore alias is available at `https://ikenhuub.github.io/ios-streaming-source/repo.json`.
 
-The main `apps.json` catalog shows both Nuvio variants so FlareStore users can choose which one to install. Both variants use `com.nuvio.media`, so installing one replaces the other. AltStore Classic does not permit duplicate bundle identifiers in a single source; use the individual source URLs below with strict AltStore-compatible clients.
+The main `apps.json` catalog shows both Nuvio variants so FlareStore users can choose which one to install. Both variants use `com.nuvio.media`, so installing one replaces the other.
+
+## AltStore-compatible source URLs
+
+AltStore Classic, SideStore, and other clients that enforce unique bundle identifiers can use one of these complete catalogs:
+
+- Enhanced catalog: `https://ikenhuub.github.io/ios-streaming-source/altstore-enhanced.json`
+- Full catalog: `https://ikenhuub.github.io/ios-streaming-source/altstore-full.json`
+
+Both contain APEX and Stremio. Choose which Nuvio variant you want included. These catalogs pass strict AltStore source validation.
 
 The individual Nuvio Full source is:
 

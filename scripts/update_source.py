@@ -341,6 +341,32 @@ def update() -> bool:
         separate_output["apps"] = [separate_app]
         separate_output["featuredApps"] = [separate_app["bundleIdentifier"]]
         wrote |= write_json_if_changed(PUBLIC_DIR / filename, separate_output)
+    config_by_id = {app["id"]: app for app in config["apps"]}
+    for compatible_config in config.get("compatibleSources", []):
+        compatible_apps = []
+        for app_id in compatible_config["appIds"]:
+            app_config = config_by_id[app_id]
+            generated_app = next(
+                (app for app in generated_apps if app["name"] == app_config["name"]),
+                None,
+            )
+            if generated_app:
+                compatible_apps.append(generated_app)
+        compatible_output = base_source(config)
+        compatible_output["name"] = compatible_config["name"]
+        compatible_output["identifier"] = (
+            f"{config['source']['identifier']}."
+            f"{Path(compatible_config['filename']).stem.replace('-', '.')}"
+        )
+        compatible_output["subtitle"] = compatible_config["subtitle"]
+        compatible_output["apps"] = compatible_apps
+        compatible_output["featuredApps"] = [
+            app["bundleIdentifier"] for app in compatible_apps[:5]
+        ]
+        wrote |= write_json_if_changed(
+            PUBLIC_DIR / compatible_config["filename"],
+            compatible_output,
+        )
     wrote |= write_json_if_changed(STATE_PATH, state)
     if wrote:
         print("Source updated")
