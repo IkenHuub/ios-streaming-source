@@ -50,7 +50,7 @@ The bundle identifier, app version, build version, minimum iOS version, privacy 
 
 ## YouTube by lowiqentity
 
-The legacy-style YouTube build is linked directly and unmodified from [`lowiqentity/releases`](https://github.com/lowiqentity/releases/releases). The developer explicitly marks this IPA as supporting installation only through Feather and LiveContainer. It is included in the main catalog with that warning, but excluded from the AltStore Classic catalogs. Future releases are not guaranteed now that the developer is also working on APEX.
+This customized YouTube build is linked directly and unmodified from [`lowiqentity/releases`](https://github.com/lowiqentity/releases/releases). It is retained alongside APEX for users who prefer this version. Future releases are not guaranteed now that the developer is also working on APEX.
 
 ## Stremio
 

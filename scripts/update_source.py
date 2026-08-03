@@ -141,7 +141,9 @@ def ipa_metadata(path: Path) -> dict:
     }
 
 
-def release_description(app: dict, release: dict) -> str:
+def release_description(app: dict, release: dict, version: str | None = None) -> str:
+    if template := app.get("versionDescriptionTemplate"):
+        return template.format(releaseTag=release["tag_name"], version=version or release["tag_name"])
     body = release.get("body") or ""
     without_urls = IPA_URL_RE.sub("", body)
     without_label = re.sub(r"^\s*(release|download)\s*:\s*", "", without_urls, flags=re.IGNORECASE).strip()
@@ -210,7 +212,26 @@ def update() -> bool:
         release_key = f"{release['id']}:{release.get('updated_at', '')}"
         previous = existing_by_name.get(app["name"])
         if state.get(app["id"], {}).get("releaseKey") == release_key and previous:
-            generated_apps.append(previous)
+            current_entry = dict(previous)
+            current_entry.update(
+                {
+                    "name": app["name"],
+                    "developerName": app["developerName"],
+                    "subtitle": app["subtitle"],
+                    "localizedDescription": app["localizedDescription"],
+                    "iconURL": app["iconURL"],
+                    "tintColor": app["tintColor"],
+                    "category": app.get("category", "other"),
+                }
+            )
+            if app.get("versionDescriptionTemplate") and current_entry.get("versions"):
+                current_entry["versions"] = [dict(item) for item in current_entry["versions"]]
+                current_entry["versions"][0]["localizedDescription"] = release_description(
+                    app,
+                    release,
+                    current_entry["versions"][0]["version"],
+                )
+            generated_apps.append(current_entry)
             continue
 
         if ipa_url is None:
@@ -272,7 +293,7 @@ def update() -> bool:
                 "localizedDescription": (
                     upstream_version.get("localizedDescription", "")
                     if upstream_version
-                    else release_description(app, release)
+                    else release_description(app, release, metadata["version"])
                 ),
                 "downloadURL": ipa_url,
                 "size": metadata["size"],
