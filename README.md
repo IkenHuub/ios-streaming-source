@@ -1,6 +1,6 @@
 # iOS Streaming Source
 
-A generic AltStore-compatible source for official iOS app distributions. The source works with AltStore Classic and apps that support the same source format, including FlareStore, Feather, and SideStore.
+A generic AltStore-compatible source for (un)official iOS streaming apps. The source works with AltStore Classic and apps that support the same source format, including FlareStore, Feather, and SideStore.
 
 ## Source URL
 
