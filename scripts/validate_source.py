@@ -90,7 +90,7 @@ def validate(path: Path, check_remote: bool = False) -> list[str]:
             if check_remote and https_url(version.get("downloadURL", ""), ipa=True):
                 request = urllib.request.Request(
                     version["downloadURL"],
-                    headers={"Range": "bytes=0-3", "User-Agent": "ios-source-validator/1.0"},
+                    headers={"Range": "bytes=0-3", "User-Agent": "ios-streaming-source-validator/1.0"},
                 )
                 try:
                     with urllib.request.urlopen(request, timeout=60) as response:

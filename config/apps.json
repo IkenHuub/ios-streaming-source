@@ -1,10 +1,10 @@
 {
   "source": {
-    "name": "IkenHuub iOS Source",
+    "name": "IkenHuub iOS Streaming Source",
     "identifier": "com.ikenhuub.ios-source",
-    "subtitle": "Officiële iOS-appdistributies, rechtstreeks van hun ontwikkelaars.",
-    "description": "Een generieke AltStore-compatible source voor zorgvuldig gecontroleerde officiële appdistributies.",
-    "website": "https://github.com/IkenHuub/ios-source",
+    "subtitle": "Official iOS app distributions, provided directly by their developers.",
+    "description": "A generic AltStore-compatible source for carefully verified official app distributions.",
+    "website": "https://github.com/IkenHuub/ios-streaming-source",
     "tintColor": "#FF0033"
   },
   "apps": [
@@ -13,8 +13,8 @@
       "name": "APEX",
       "githubRepository": "lowiqentity/APEX",
       "developerName": "lowiqentity",
-      "subtitle": "Een aangepaste YouTube-ervaring voor iOS.",
-      "localizedDescription": "APEX is een aangepaste YouTube-app voor iOS. Deze source verwijst uitsluitend naar de ongewijzigde IPA die de APEX-ontwikkelaar zelf in de officiële GitHub Release publiceert.",
+      "subtitle": "A customized YouTube experience for iOS.",
+      "localizedDescription": "APEX is a customized YouTube app for iOS. This source links exclusively to the unmodified IPA published by the APEX developer in the official GitHub Release.",
       "iconURL": "https://avatars.githubusercontent.com/u/310374126?v=4",
       "tintColor": "#FF0033",
       "category": "entertainment",

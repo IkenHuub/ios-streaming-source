@@ -1,9 +1,9 @@
 {
-  "name": "IkenHuub iOS Source",
+  "name": "IkenHuub iOS Streaming Source",
   "identifier": "com.ikenhuub.ios-source",
-  "subtitle": "Officiële iOS-appdistributies, rechtstreeks van hun ontwikkelaars.",
-  "description": "Een generieke AltStore-compatible source voor zorgvuldig gecontroleerde officiële appdistributies.",
-  "website": "https://github.com/IkenHuub/ios-source",
+  "subtitle": "Official iOS app distributions, provided directly by their developers.",
+  "description": "A generic AltStore-compatible source for carefully verified official app distributions.",
+  "website": "https://github.com/IkenHuub/ios-streaming-source",
   "tintColor": "#FF0033",
   "featuredApps": [
     "com.google.ios.youtube"
@@ -13,8 +13,8 @@
       "name": "APEX",
       "bundleIdentifier": "com.google.ios.youtube",
       "developerName": "lowiqentity",
-      "subtitle": "Een aangepaste YouTube-ervaring voor iOS.",
-      "localizedDescription": "APEX is een aangepaste YouTube-app voor iOS. Deze source verwijst uitsluitend naar de ongewijzigde IPA die de APEX-ontwikkelaar zelf in de officiële GitHub Release publiceert.",
+      "subtitle": "A customized YouTube experience for iOS.",
+      "localizedDescription": "APEX is a customized YouTube app for iOS. This source links exclusively to the unmodified IPA published by the APEX developer in the official GitHub Release.",
       "iconURL": "https://avatars.githubusercontent.com/u/310374126?v=4",
       "tintColor": "#FF0033",
       "category": "entertainment",
@@ -24,7 +24,7 @@
           "buildVersion": "21.30.5",
           "marketingVersion": "APEX 0.1.0 (YouTube 21.30.5)",
           "date": "2026-08-03T06:19:49Z",
-          "localizedDescription": "Officiële APEX-release 0.1.0.",
+          "localizedDescription": "Official APEX release 0.1.0.",
           "downloadURL": "https://files.catbox.moe/5kz9oe.ipa",
           "size": 131859933,
           "sha256": "ba9cfa1409ac25e58ffe3a2f85a96dc76debdffa7028478ef19dde9f56238830",

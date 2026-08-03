@@ -23,7 +23,7 @@ PUBLIC_DIR = ROOT / "public"
 SOURCE_PATH = PUBLIC_DIR / "apps.json"
 ALIAS_PATH = PUBLIC_DIR / "repo.json"
 STATE_PATH = ROOT / "state" / "releases.json"
-USER_AGENT = "IkenHuub-ios-source-updater/1.0"
+USER_AGENT = "IkenHuub-ios-streaming-source-updater/1.0"
 IPA_URL_RE = re.compile(r"https://[^\s<>\"')]+?\.ipa(?:\?[^\s<>\"')]+)?", re.IGNORECASE)
 
 
@@ -67,7 +67,7 @@ def select_ipa_url(release: dict, allow_body: bool) -> str:
 def download_ipa(url: str) -> Path:
     if urllib.parse.urlparse(url).scheme != "https" or not urllib.parse.urlparse(url).path.lower().endswith(".ipa"):
         raise RuntimeError(f"IPA URL is not an absolute HTTPS .ipa URL: {url}")
-    handle = tempfile.NamedTemporaryFile(prefix="ios-source-", suffix=".ipa", delete=False)
+    handle = tempfile.NamedTemporaryFile(prefix="ios-streaming-source-", suffix=".ipa", delete=False)
     path = Path(handle.name)
     try:
         local_ipa = os.environ.get("IOS_SOURCE_IPA_PATH")
@@ -136,7 +136,7 @@ def release_description(app: dict, release: dict) -> str:
     body = release.get("body") or ""
     without_urls = IPA_URL_RE.sub("", body)
     without_label = re.sub(r"^\s*(release|download)\s*:\s*", "", without_urls, flags=re.IGNORECASE).strip()
-    return without_label or f"Officiële {app['name']}-release {release['tag_name']}."
+    return without_label or f"Official {app['name']} release {release['tag_name']}."
 
 
 def base_source(config: dict) -> dict:
