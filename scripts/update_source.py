@@ -172,6 +172,8 @@ def update() -> bool:
     config = load_json(CONFIG_PATH, {})
     existing = load_json(SOURCE_PATH, base_source(config))
     state = load_json(STATE_PATH, {})
+    configured_ids = {app["id"] for app in config["apps"]}
+    state = {app_id: value for app_id, value in state.items() if app_id in configured_ids}
     existing_by_bundle = {app["bundleIdentifier"]: app for app in existing.get("apps", [])}
     existing_by_name = {app["name"]: app for app in existing.get("apps", [])}
     generated_apps = []
@@ -246,7 +248,14 @@ def update() -> bool:
                     + ", ".join(mismatches)
                 )
 
-        previous = existing_by_bundle.get(metadata["bundleIdentifier"], previous)
+        if (
+            app.get("resetHistoryOnBundleChange")
+            and previous
+            and previous.get("bundleIdentifier") != metadata["bundleIdentifier"]
+        ):
+            previous = None
+        elif previous is None:
+            previous = existing_by_bundle.get(metadata["bundleIdentifier"])
         versions = list(previous.get("versions", [])) if previous else []
         version_identity = (metadata["version"], metadata["buildVersion"])
         known_identities = {(item["version"], item.get("buildVersion", "")) for item in versions}

@@ -33,11 +33,7 @@ Official Nuvio is monitored through [`NuvioMedia/NuvioMobile`](https://github.co
 
 ## Nuvio Enhanced
 
-Nuvio Enhanced is a community-maintained fork from [`yesnt10/NuvioMobile-Enhanced`](https://github.com/yesnt10/NuvioMobile-Enhanced). Its unsigned IPA is linked directly from the fork maintainer's official GitHub Release and is never rehosted or modified by this repository. Its separate `com.nuvio.enhanced` bundle identifier allows it to be installed alongside official Nuvio.
-
-## Nuvio Full
-
-Nuvio Full is an unofficial, full-featured iOS build from [`luqmanfadlli/NuvioMobile-iOS`](https://github.com/luqmanfadlli/NuvioMobile-iOS), a fork of the official NuvioMobile source code. The IPA is linked directly from that fork's GitHub Release and is never rehosted or modified here. It uses Nuvio's `com.nuvio.media` bundle identifier, so it may replace or conflict with an existing official Nuvio installation rather than install alongside it.
+Nuvio Enhanced is an actively maintained unofficial build from [`luqmanfadlli/NuvioMobile-iOS`](https://github.com/luqmanfadlli/NuvioMobile-iOS). This repository maintains its own source metadata and links directly to the latest unmodified `-Enhanced.ipa` published in that project's GitHub Releases; the upstream raw source JSON is not used for distribution. It uses Nuvio's `com.nuvio.media` bundle identifier, so it may replace or conflict with another Nuvio installation rather than install alongside it.
 
 ## Adding more apps later
 
