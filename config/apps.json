@@ -75,8 +75,7 @@
       "category": "entertainment",
       "entitlements": [],
       "ipaAssetPattern": "-Full\\.ipa$",
-      "isolateHistory": true,
-      "separateSource": "nuvio-full.json"
+      "isolateHistory": true
     }
   ]
 }

@@ -30,7 +30,12 @@ jobs:
       - name: Validate source before publishing
         run: |
           for source in public/*.json; do
-            python3 scripts/validate_source.py "$source"
+            case "$source" in
+              public/apps.json|public/repo.json)
+                python3 scripts/validate_source.py --allow-duplicate-bundles "$source" ;;
+              *)
+                python3 scripts/validate_source.py "$source" ;;
+            esac
           done
 
       - name: Configure Pages

@@ -40,7 +40,11 @@ def https_url(value: str, ipa: bool = False) -> bool:
     return parsed.scheme == "https" and bool(parsed.netloc) and (not ipa or parsed.path.lower().endswith(".ipa"))
 
 
-def validate(path: Path, check_remote: bool = False) -> list[str]:
+def validate(
+    path: Path,
+    check_remote: bool = False,
+    allow_duplicate_bundles: bool = False,
+) -> list[str]:
     errors: list[str] = []
     try:
         source = json.loads(path.read_text(encoding="utf-8"))
@@ -61,7 +65,7 @@ def validate(path: Path, check_remote: bool = False) -> list[str]:
         if missing:
             errors.append(f"{label}: missing {', '.join(sorted(missing))}")
         bundle = app.get("bundleIdentifier")
-        if bundle in bundles:
+        if bundle in bundles and not allow_duplicate_bundles:
             errors.append(f"{label}: duplicate bundleIdentifier {bundle}")
         bundles.add(bundle)
         if not https_url(app.get("iconURL", "")):
@@ -106,8 +110,9 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("path", nargs="?", type=Path, default=ROOT / "public" / "apps.json")
     parser.add_argument("--remote", action="store_true")
+    parser.add_argument("--allow-duplicate-bundles", action="store_true")
     args = parser.parse_args()
-    errors = validate(args.path, args.remote)
+    errors = validate(args.path, args.remote, args.allow_duplicate_bundles)
     alias = ROOT / "public" / "repo.json"
     if args.path == ROOT / "public" / "apps.json" and alias.exists():
         if json.loads(alias.read_text(encoding="utf-8")) != json.loads(args.path.read_text(encoding="utf-8")):
@@ -117,7 +122,10 @@ def main() -> int:
         for error in errors:
             print(f"- {error}")
         return 1
-    print("VALID: JSON syntax and AltStore source structure passed")
+    if args.allow_duplicate_bundles:
+        print("VALID: JSON syntax and FlareStore catalog structure passed")
+    else:
+        print("VALID: JSON syntax and AltStore source structure passed")
     return 0
 
 

@@ -8,6 +8,7 @@
   "featuredApps": [
     "com.google.ios.youtube",
     "com.stremio.pal",
+    "com.nuvio.media",
     "com.nuvio.media"
   ],
   "apps": [
@@ -92,6 +93,32 @@
           "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-iOS/releases/download/0.4.0/Nuvio-v0.4.0-Enhanced.ipa",
           "size": 47078757,
           "sha256": "2a4df2ba2d83c406f3b7646256c02a7ff24e2d492f40e0c9a53dc403bc1a0a60",
+          "minOSVersion": "16.1"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      }
+    },
+    {
+      "name": "Nuvio Full",
+      "bundleIdentifier": "com.nuvio.media",
+      "developerName": "NuvioMedia / luqmanfadlli",
+      "subtitle": "The unmodified full Nuvio community build.",
+      "localizedDescription": "Nuvio Full is an unofficial iOS build produced from the upstream NuvioMobile source by the NuvioMobile-iOS maintainer. This catalog links directly to the unmodified Full IPA published in that project's GitHub Releases. It shares its bundle identifier with Nuvio Enhanced, so installing one variant replaces the other.",
+      "iconURL": "https://raw.githubusercontent.com/luqmanfadlli/NuvioMobile-iOS/cmp-rewrite/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
+      "tintColor": "#18B6A4",
+      "category": "entertainment",
+      "versions": [
+        {
+          "version": "0.4.0",
+          "buildVersion": "102",
+          "date": "2026-08-02T00:58:08Z",
+          "localizedDescription": "# 🚀 Release v0.4.0 - New SIMKL Tracking\r\n\r\n## Upstream changelog:\r\nIntroducing SIMKL as a new native tracking provider @tapframe @skoruppa\r\n- fix: handle torrent cache pressure on Android @tapframe\r\n- Take videoid from meta for track services in progress items @skoruppa\r\n- fix(search): remove recent history icons @tapframe\r\n- Add badges to TmdbEntityBrowser @skoruppa\r\n- Add Slovak language strings for settings and features @mmsw91\r\n- Update Slovak translations for parental content strings @mmsw91\r\n- Fix \"mark as unwatched\" for whole series @skoruppa\r\n- fix(auth): sanitize authentication errors @tapframe\r\n- fix(profiles): activate selected profile once @tapframe\r\n- fix(trakt): restore seek scrobble updates @tapframe\r\n\r\n## Enhanced changelog:\r\n- All changes from the upstream\r\n- Refactor subtitle cue display with LazyColumn @BD-0000\r\n- fix(ios): resolve stream stuck @luqmanfadlli\r\n- refine profile insight page @luqmanfadlli \r\n- differentiate product name @luqmanfadlli \r\n- fix(player): make volume boost actually louder instead of clipping @luqmanfadlli\r\n- fix(player): stop tap-to-seek from committing the seek twice @luqmanfadlli \r\n- remove trakt from interngations settings @luqmanfadlli\r\n---\r\n\r\n## Variants\r\n\r\n### Nuvio Full\r\nThis variant is built from the official source without any modifications or additions.\r\n\r\nAltStore/SideStore source:\r\n```\r\nhttps://raw.githubusercontent.com/luqmanfadlli/NuvioMobile-iOS/main/NuvioFull.json\r\n```\r\n\r\n### Nuvio Enhanced\r\nThis custom variant includes experimental features, quality-of-life improvements, and specific bug fixes not yet available in the upstream repository.\r\n\r\nAltStore/SideStore source:\r\n```\r\nhttps://raw.githubusercontent.com/luqmanfadlli/NuvioMobile-iOS/main/NuvioEnhanced.json\r\n```\r\n\r\n**Added Features:**\r\n- iOS: Added adaptive hide/unhide Liquid Glass NavBar on scroll. \r\n- iOS: Added experimental PiP for iOS and iPadOS.\r\n- iOS: Added hero trailer playback.\r\n- All: Added a volume boost feature (up to 200%) for quieter streams (volume up gesture can go beyond 100%).\r\n- All: Added support for Live TV integrations.\r\n- All: Added stream quality selection in Player Control.\r\n- All: Added artwork type selection for Hero background.\r\n- All: Added Tap-to-Seek (you can tap on player progress bar to seek forward/backward).\r\n- All: Added in-app debug logs (go to Settings -> Advanced -> Debug Logs).\r\n- All: Changed the \"Play\" button to \"Watch Again\" for already-watched movies to improve tracking clarity.\r\n- All: Added Library Calendar.\r\n- All: Added playback info button.\r\n- All: Added adjustable subtitle background transparency.\r\n- All: Added episode rating toggle in TMDB Enrichment.\r\n- All: Added profile insight page.\r\n\r\n**Bug Fixes:**\r\n- iOS: Fixed persistent home bar on iOS 16-18. \r\n- iOS: Fixed double legacy navbar on iOS 16-18.\r\n- iOS: Fixed animated GIF support for Profile Avatars.\r\n- iOS: Fixed animated GIF support for Stream Badge.\r\n- Android: Fixed status bar visibility\r\n\r\n---\r\n> **💡 Note**\r\nI don’t accept personal donations and my release doesn’t change donation URL. All donations should rightfully go to @tapframe.",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-iOS/releases/download/0.4.0/Nuvio-v0.4.0-Full.ipa",
+          "size": 46190861,
+          "sha256": "0fadb39632aefbffcd4cc1c76b1a7a941b70001e8383a3c1ccb3e59056906389",
           "minOSVersion": "16.1"
         }
       ],

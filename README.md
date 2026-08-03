@@ -10,7 +10,9 @@ https://ikenhuub.github.io/ios-streaming-source/apps.json
 
 An identical compatibility alias is available at `https://ikenhuub.github.io/ios-streaming-source/repo.json`.
 
-The optional Nuvio Full variant is available through our separate source:
+The main `apps.json` catalog shows both Nuvio variants so FlareStore users can choose which one to install. Both variants use `com.nuvio.media`, so installing one replaces the other. AltStore Classic does not permit duplicate bundle identifiers in a single source; use the individual source URLs below with strict AltStore-compatible clients.
+
+The individual Nuvio Full source is:
 
 ```text
 https://ikenhuub.github.io/ios-streaming-source/nuvio-full.json
@@ -52,7 +54,7 @@ Nuvio Enhanced is an actively maintained unofficial build from [`luqmanfadlli/Nu
 
 Nuvio Full is the alternative Full build from [`luqmanfadlli/NuvioMobile-iOS`](https://github.com/luqmanfadlli/NuvioMobile-iOS). This repository links directly to the latest unmodified `-Full.ipa` from its GitHub Releases. Full and Enhanced intentionally appear as separate choices in this source, but both use `com.nuvio.media`; installing one therefore replaces the other.
 
-AltStore-compatible sources require unique bundle identifiers, so Full is published through the separate `nuvio-full.json` source above. Both JSON files are generated, maintained, and hosted by this repository.
+Both Nuvio variants appear in the main FlareStore catalog. Their individual JSON files remain available for clients that enforce AltStore's unique-bundle-identifier rule.
 
 ## Adding more apps later
 
