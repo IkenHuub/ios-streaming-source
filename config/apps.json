@@ -60,7 +60,23 @@
       "category": "entertainment",
       "entitlements": [],
       "ipaAssetPattern": "-Enhanced\\.ipa$",
+      "isolateHistory": true,
       "resetHistoryOnBundleChange": true
+    },
+    {
+      "id": "nuvio-full",
+      "name": "Nuvio Full",
+      "githubRepository": "luqmanfadlli/NuvioMobile-iOS",
+      "developerName": "NuvioMedia / luqmanfadlli",
+      "subtitle": "The unmodified full Nuvio community build.",
+      "localizedDescription": "Nuvio Full is an unofficial iOS build produced from the upstream NuvioMobile source by the NuvioMobile-iOS maintainer. This catalog links directly to the unmodified Full IPA published in that project's GitHub Releases. It shares its bundle identifier with Nuvio Enhanced, so installing one variant replaces the other.",
+      "iconURL": "https://raw.githubusercontent.com/luqmanfadlli/NuvioMobile-iOS/cmp-rewrite/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
+      "tintColor": "#18B6A4",
+      "category": "entertainment",
+      "entitlements": [],
+      "ipaAssetPattern": "-Full\\.ipa$",
+      "isolateHistory": true,
+      "separateSource": "nuvio-full.json"
     }
   ]
 }

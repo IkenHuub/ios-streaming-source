@@ -1,0 +1,51 @@
+{
+  "name": "IkenHuub iOS Streaming Source — APEX",
+  "identifier": "com.ikenhuub.ios-streaming-source.apex",
+  "subtitle": "Optional APEX variant.",
+  "description": "A generic AltStore-compatible source for (un)official iOS streaming apps.",
+  "website": "https://github.com/IkenHuub/ios-streaming-source",
+  "tintColor": "#FF0033",
+  "featuredApps": [
+    "com.google.ios.youtube"
+  ],
+  "apps": [
+    {
+      "name": "APEX",
+      "bundleIdentifier": "com.google.ios.youtube",
+      "developerName": "lowiqentity",
+      "subtitle": "A customized YouTube experience for iOS.",
+      "localizedDescription": "APEX is a customized YouTube app for iOS. This source links exclusively to the unmodified IPA published by the APEX developer in the official GitHub Release.",
+      "iconURL": "https://avatars.githubusercontent.com/u/310374126?v=4",
+      "tintColor": "#FF0033",
+      "category": "entertainment",
+      "versions": [
+        {
+          "version": "21.30.5",
+          "buildVersion": "21.30.5",
+          "marketingVersion": "APEX 0.1.0 (YouTube 21.30.5)",
+          "date": "2026-08-03T06:19:49Z",
+          "localizedDescription": "Official APEX release 0.1.0.",
+          "downloadURL": "https://files.catbox.moe/5kz9oe.ipa",
+          "size": 131859933,
+          "sha256": "ba9cfa1409ac25e58ffe3a2f85a96dc76debdffa7028478ef19dde9f56238830",
+          "minOSVersion": "16.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSAppleMusicUsageDescription": "This lets you add your own audio files to your videos.",
+          "NSBluetoothPeripheralUsageDescription": "YouTube needs bluetooth access to scan for nearby Cast devices.",
+          "NSCameraUsageDescription": "This lets you create videos using the app.",
+          "NSContactsUsageDescription": "Your contacts will be sent to YouTube servers to help you find friends to share videos with.",
+          "NSLocalNetworkUsageDescription": "Access to your network allows YouTube to discover and connect to devices such as your TV.",
+          "NSLocationWhenInUseUsageDescription": "This enables local content discovery, improved recommendations, and enhanced search results.",
+          "NSMicrophoneUsageDescription": "This lets you include audio with your videos and search using your voice.",
+          "NSPhotoLibraryUsageDescription": "This lets you upload media you've already created.",
+          "NSUserTrackingUsageDescription": "To personalize ads and provide ad measurement, YouTube will link activity from this app with activity from non-Google apps and websites."
+        }
+      }
+    }
+  ],
+  "news": []
+}

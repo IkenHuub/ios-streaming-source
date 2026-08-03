@@ -10,6 +10,19 @@ https://ikenhuub.github.io/ios-streaming-source/apps.json
 
 An identical compatibility alias is available at `https://ikenhuub.github.io/ios-streaming-source/repo.json`.
 
+The optional Nuvio Full variant is available through our separate source:
+
+```text
+https://ikenhuub.github.io/ios-streaming-source/nuvio-full.json
+```
+
+Every published app also has an individual source hosted by this repository:
+
+- `https://ikenhuub.github.io/ios-streaming-source/apex.json`
+- `https://ikenhuub.github.io/ios-streaming-source/stremio.json`
+- `https://ikenhuub.github.io/ios-streaming-source/nuvio-enhanced.json`
+- `https://ikenhuub.github.io/ios-streaming-source/nuvio-full.json`
+
 ## Add to FlareStore
 
 1. Open FlareStore and go to **Sources**.
@@ -34,6 +47,12 @@ Official Nuvio is monitored through [`NuvioMedia/NuvioMobile`](https://github.co
 ## Nuvio Enhanced
 
 Nuvio Enhanced is an actively maintained unofficial build from [`luqmanfadlli/NuvioMobile-iOS`](https://github.com/luqmanfadlli/NuvioMobile-iOS). This repository maintains its own source metadata and links directly to the latest unmodified `-Enhanced.ipa` published in that project's GitHub Releases; the upstream raw source JSON is not used for distribution. It uses Nuvio's `com.nuvio.media` bundle identifier, so it may replace or conflict with another Nuvio installation rather than install alongside it.
+
+## Nuvio Full
+
+Nuvio Full is the alternative Full build from [`luqmanfadlli/NuvioMobile-iOS`](https://github.com/luqmanfadlli/NuvioMobile-iOS). This repository links directly to the latest unmodified `-Full.ipa` from its GitHub Releases. Full and Enhanced intentionally appear as separate choices in this source, but both use `com.nuvio.media`; installing one therefore replaces the other.
+
+AltStore-compatible sources require unique bundle identifiers, so Full is published through the separate `nuvio-full.json` source above. Both JSON files are generated, maintained, and hosted by this repository.
 
 ## Adding more apps later
 

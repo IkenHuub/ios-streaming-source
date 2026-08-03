@@ -22,5 +22,13 @@
     "version": "2.0.6",
     "buildVersion": "21",
     "sha256": "3ff786e83de059293d57378a742c4b70d069fa745133b5f909ea0e060dabf10d"
+  },
+  "nuvio-full": {
+    "releaseKey": "363574603:2026-08-02T00:58:08Z",
+    "releaseTag": "0.4.0",
+    "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-iOS/releases/download/0.4.0/Nuvio-v0.4.0-Full.ipa",
+    "version": "0.4.0",
+    "buildVersion": "102",
+    "sha256": "0fadb39632aefbffcd4cc1c76b1a7a941b70001e8383a3c1ccb3e59056906389"
   }
 }

@@ -1,0 +1,40 @@
+{
+  "name": "IkenHuub iOS Streaming Source — Stremio",
+  "identifier": "com.ikenhuub.ios-streaming-source.stremio",
+  "subtitle": "Optional Stremio variant.",
+  "description": "A generic AltStore-compatible source for (un)official iOS streaming apps.",
+  "website": "https://github.com/IkenHuub/ios-streaming-source",
+  "tintColor": "#FF0033",
+  "featuredApps": [
+    "com.stremio.pal"
+  ],
+  "apps": [
+    {
+      "name": "Stremio",
+      "bundleIdentifier": "com.stremio.pal",
+      "developerName": "Stremio",
+      "subtitle": "Freedom to stream.",
+      "localizedDescription": "Stremio is a modern media center for movies, series, live TV, and web channels. This entry follows the unofficial omix4 AltStore source while downloading the unmodified IPA directly from Stremio's public CDN.",
+      "iconURL": "https://repo.omix4.one/assets/stremio-icon.png",
+      "tintColor": "#7055D9",
+      "category": "entertainment",
+      "versions": [
+        {
+          "version": "2.0.6",
+          "buildVersion": "21",
+          "date": "2026-07-22",
+          "localizedDescription": "feat: new desktop like UI for player and navigation on iPadOS",
+          "downloadURL": "https://dl.strem.io/apple/2.0.6b21/ios/stremio_iOS.ipa",
+          "size": 75942223,
+          "sha256": "3ff786e83de059293d57378a742c4b70d069fa745133b5f909ea0e060dabf10d",
+          "minOSVersion": "13.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      }
+    }
+  ],
+  "news": []
+}

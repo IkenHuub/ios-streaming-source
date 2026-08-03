@@ -254,7 +254,7 @@ def update() -> bool:
             and previous.get("bundleIdentifier") != metadata["bundleIdentifier"]
         ):
             previous = None
-        elif previous is None:
+        elif previous is None and not app.get("isolateHistory"):
             previous = existing_by_bundle.get(metadata["bundleIdentifier"])
         versions = list(previous.get("versions", [])) if previous else []
         version_identity = (metadata["version"], metadata["buildVersion"])
@@ -314,16 +314,40 @@ def update() -> bool:
                 "sha256": metadata["sha256"],
             }
 
+    config_by_name = {app["name"]: app for app in config["apps"]}
+    main_apps = [
+        app for app in generated_apps if not config_by_name[app["name"]].get("separateSource")
+    ]
+
     output = base_source(config)
-    output["apps"] = generated_apps
-    output["featuredApps"] = [app["bundleIdentifier"] for app in generated_apps[:5]]
-    if not changed and SOURCE_PATH.exists():
-        print("No new IPA version found; apps.json remains unchanged")
-        return False
+    output["apps"] = main_apps
+    output["featuredApps"] = [app["bundleIdentifier"] for app in main_apps[:5]]
     wrote = write_json_if_changed(SOURCE_PATH, output)
     wrote |= write_json_if_changed(ALIAS_PATH, output)
+    for app_config in config["apps"]:
+        filename = app_config.get("separateSource") or f"{app_config['id']}.json"
+        separate_app = next(
+            (app for app in generated_apps if app["name"] == app_config["name"]),
+            None,
+        )
+        if not separate_app:
+            continue
+        separate_output = base_source(config)
+        separate_output["name"] = f"{config['source']['name']} — {separate_app['name']}"
+        separate_output["identifier"] = (
+            f"{config['source']['identifier']}.{Path(filename).stem.replace('-', '.')}"
+        )
+        separate_output["subtitle"] = f"Optional {separate_app['name']} variant."
+        separate_output["apps"] = [separate_app]
+        separate_output["featuredApps"] = [separate_app["bundleIdentifier"]]
+        wrote |= write_json_if_changed(PUBLIC_DIR / filename, separate_output)
     wrote |= write_json_if_changed(STATE_PATH, state)
-    print("Source updated" if wrote else "Source already current")
+    if wrote:
+        print("Source updated")
+    elif changed:
+        print("Source already current")
+    else:
+        print("No new IPA version found; source files remain unchanged")
     return wrote
 
 
