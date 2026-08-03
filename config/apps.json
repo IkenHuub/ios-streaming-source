@@ -19,7 +19,46 @@
       "tintColor": "#FF0033",
       "category": "entertainment",
       "entitlements": [],
+      "marketingVersionTemplate": "APEX {releaseTag} (YouTube {version})",
       "allowReleaseBodyIPA": true
+    },
+    {
+      "id": "nuvio",
+      "name": "Nuvio",
+      "githubRepository": "NuvioMedia/NuvioMobile",
+      "developerName": "NuvioMedia",
+      "subtitle": "A modern cross-platform media hub.",
+      "localizedDescription": "Nuvio is a modern media hub for iOS and Android with support for the Stremio addon ecosystem. This entry is published only when the official Nuvio GitHub Release provides a directly downloadable IPA.",
+      "iconURL": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/cmp-rewrite/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
+      "tintColor": "#18B6A4",
+      "category": "entertainment",
+      "entitlements": [],
+      "allowMissingIPA": true
+    },
+    {
+      "id": "nuvio-enhanced",
+      "name": "Nuvio Enhanced",
+      "githubRepository": "yesnt10/NuvioMobile-Enhanced",
+      "developerName": "yesnt10",
+      "subtitle": "A community-enhanced build of NuvioMobile.",
+      "localizedDescription": "Nuvio Enhanced is a community-maintained NuvioMobile fork focused on interface polish, faster browsing, playback improvements, and experimental features. It uses a separate bundle identifier and can be installed alongside official Nuvio.",
+      "iconURL": "https://raw.githubusercontent.com/yesnt10/NuvioMobile-Enhanced/enhanced/iosApp/iosApp/Assets.xcassets/IconEnhanced.appiconset/icon-1024.png",
+      "tintColor": "#8B5CF6",
+      "category": "entertainment",
+      "entitlements": []
+    },
+    {
+      "id": "nuvio-full",
+      "name": "Nuvio Full",
+      "githubRepository": "luqmanfadlli/NuvioMobile-iOS",
+      "developerName": "NuvioMedia / luqmanfadlli",
+      "subtitle": "A full-featured community build of official Nuvio source code.",
+      "localizedDescription": "Nuvio Full is an unofficial, full-featured iOS build produced from the official NuvioMobile source code by the maintainer of NuvioMobile-iOS. It is intended for sideloading and includes functionality that cannot be distributed through Apple's App Store.",
+      "iconURL": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/cmp-rewrite/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
+      "tintColor": "#18B6A4",
+      "category": "entertainment",
+      "entitlements": [],
+      "ipaAssetPattern": "-Full\\.ipa$"
     }
   ]
 }

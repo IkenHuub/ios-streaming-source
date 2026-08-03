@@ -6,7 +6,9 @@
   "website": "https://github.com/IkenHuub/ios-streaming-source",
   "tintColor": "#FF0033",
   "featuredApps": [
-    "com.google.ios.youtube"
+    "com.google.ios.youtube",
+    "com.nuvio.enhanced",
+    "com.nuvio.media"
   ],
   "apps": [
     {
@@ -44,6 +46,58 @@
           "NSPhotoLibraryUsageDescription": "This lets you upload media you've already created.",
           "NSUserTrackingUsageDescription": "To personalize ads and provide ad measurement, YouTube will link activity from this app with activity from non-Google apps and websites."
         }
+      }
+    },
+    {
+      "name": "Nuvio Enhanced",
+      "bundleIdentifier": "com.nuvio.enhanced",
+      "developerName": "yesnt10",
+      "subtitle": "A community-enhanced build of NuvioMobile.",
+      "localizedDescription": "Nuvio Enhanced is a community-maintained NuvioMobile fork focused on interface polish, faster browsing, playback improvements, and experimental features. It uses a separate bundle identifier and can be installed alongside official Nuvio.",
+      "iconURL": "https://raw.githubusercontent.com/yesnt10/NuvioMobile-Enhanced/enhanced/iosApp/iosApp/Assets.xcassets/IconEnhanced.appiconset/icon-1024.png",
+      "tintColor": "#8B5CF6",
+      "category": "entertainment",
+      "versions": [
+        {
+          "version": "0.3.1",
+          "buildVersion": "102",
+          "date": "2026-07-21T08:59:12Z",
+          "localizedDescription": "**Nuvio Enhanced 0.3.1 Build 102**\r\n\r\n**What’s New**\r\nAdded Favorite Actors. You can now add actors/people to favorites and access them quickly from your profile.\r\nAdded expanded Actor Pages with movies and series the person appeared in.\r\nAdded section arrows to actor/content sections so full lists can be opened on a separate page.\r\nAdded Search by Actor Name. Actor/person profiles now appear alongside movie and series search results.\r\nAdded experimental Download Notifications with progress, artwork, title info, and pause/resume/cancel actions.\r\nAdded background stream prefetch option in Enhanced settings.\r\nAdded AI Assistant settings/API fields to backup and restore.\r\nAdded improved subtitle language grouping. Cr: Russo #32 \r\nAdded redesigned Downloads experience inside Library.\r\nDownloads now show as poster cards with progress, movie/show filters, and category filtering.\r\nAdded long-press actions for downloaded items: Play, Details, and Delete.\r\nDownloaded content now saves richer title details for offline use.\r\nAdded subtitle font customization.\r\nAdded player overlay showing estimated media finish time.\r\n\r\n**Improvements**\r\nImproved stream loading flow by optionally starting stream fetching right after opening details.\r\nImproved iOS 4K playback smoothness by enabling hardware decoder auto mode by default.\r\nImproved player brightness handling so remembered brightness no longer causes app-level brightness locking/jumping.\r\nImproved backup coverage for Enhanced/AI settings.\r\nImproved actor/profile discovery from search and profile pages.\r\nImproved download management visibility through system notifications.\r\nImproved Downloads page layout by moving downloads into Library with clearer organization.\r\nImproved poster long-press menus with blurred full-screen presentation and synopsis preview.\r\nImproved profile poster loading and fallback artwork.\r\nImproved Hero metadata loading speed and reliability.\r\nImproved MDBList/rating display reliability.\r\nImproved alternate app icon rendering.\r\nImproved in-app update banner layout.\r\nImproved stream selection synopsis handling with expandable long descriptions.\r\nImproved player behavior when changing video quality.\r\n\r\n**Fixes**\r\nFixed volume boost not actually increasing audio between 100–200%.\r\nFixed iOS brightness gesture stutter/jank caused by controller resets.\r\nFixed long synopsis blocking scrolling and preventing access to episode lists.\r\nFixed Upcoming profile counter showing 0 when future titles used non-ISO date formats.\r\nFixed brightness staying locked after player brightness changes.\r\nFixed downloaded-item action menu showing as a bottom sheet instead of the premium blur overlay.\r\nFixed bottom navigation showing behind the download action menu.\r\nFixed “Go to details” wording, now shown as Details.\r\nFixed poster/action overlay sizing issues.\r\nFixed Hero action overlap when ratings are hidden.\r\nFixed special episode next-up behavior.\r\nFixed Continue Watching row starting from the middle.\r\nFixed player speed/audio track changing unexpectedly after quality switch.\r\nFixed Enhanced settings sometimes resetting unexpectedly.\r\nFixed Android predictive-back related instability.",
+          "downloadURL": "https://github.com/yesnt10/NuvioMobile-Enhanced/releases/download/enhanced-v0.3.1-build102/Nuvio-Enhanced-v0.3.1-build102-full-unsigned.ipa",
+          "size": 57948412,
+          "sha256": "418109f5999f8a15d52900e863fa94e1a3c4f915fd525a1ae4b2bb84c4161dc4",
+          "minOSVersion": "16.1"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      }
+    },
+    {
+      "name": "Nuvio Full",
+      "bundleIdentifier": "com.nuvio.media",
+      "developerName": "NuvioMedia / luqmanfadlli",
+      "subtitle": "A full-featured community build of official Nuvio source code.",
+      "localizedDescription": "Nuvio Full is an unofficial, full-featured iOS build produced from the official NuvioMobile source code by the maintainer of NuvioMobile-iOS. It is intended for sideloading and includes functionality that cannot be distributed through Apple's App Store.",
+      "iconURL": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/cmp-rewrite/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
+      "tintColor": "#18B6A4",
+      "category": "entertainment",
+      "versions": [
+        {
+          "version": "0.4.0",
+          "buildVersion": "102",
+          "date": "2026-08-02T00:58:08Z",
+          "localizedDescription": "# 🚀 Release v0.4.0 - New SIMKL Tracking\r\n\r\n## Upstream changelog:\r\nIntroducing SIMKL as a new native tracking provider @tapframe @skoruppa\r\n- fix: handle torrent cache pressure on Android @tapframe\r\n- Take videoid from meta for track services in progress items @skoruppa\r\n- fix(search): remove recent history icons @tapframe\r\n- Add badges to TmdbEntityBrowser @skoruppa\r\n- Add Slovak language strings for settings and features @mmsw91\r\n- Update Slovak translations for parental content strings @mmsw91\r\n- Fix \"mark as unwatched\" for whole series @skoruppa\r\n- fix(auth): sanitize authentication errors @tapframe\r\n- fix(profiles): activate selected profile once @tapframe\r\n- fix(trakt): restore seek scrobble updates @tapframe\r\n\r\n## Enhanced changelog:\r\n- All changes from the upstream\r\n- Refactor subtitle cue display with LazyColumn @BD-0000\r\n- fix(ios): resolve stream stuck @luqmanfadlli\r\n- refine profile insight page @luqmanfadlli \r\n- differentiate product name @luqmanfadlli \r\n- fix(player): make volume boost actually louder instead of clipping @luqmanfadlli\r\n- fix(player): stop tap-to-seek from committing the seek twice @luqmanfadlli \r\n- remove trakt from interngations settings @luqmanfadlli\r\n---\r\n\r\n## Variants\r\n\r\n### Nuvio Full\r\nThis variant is built from the official source without any modifications or additions.\r\n\r\nAltStore/SideStore source:\r\n```\r\nhttps://raw.githubusercontent.com/luqmanfadlli/NuvioMobile-iOS/main/NuvioFull.json\r\n```\r\n\r\n### Nuvio Enhanced\r\nThis custom variant includes experimental features, quality-of-life improvements, and specific bug fixes not yet available in the upstream repository.\r\n\r\nAltStore/SideStore source:\r\n```\r\nhttps://raw.githubusercontent.com/luqmanfadlli/NuvioMobile-iOS/main/NuvioEnhanced.json\r\n```\r\n\r\n**Added Features:**\r\n- iOS: Added adaptive hide/unhide Liquid Glass NavBar on scroll. \r\n- iOS: Added experimental PiP for iOS and iPadOS.\r\n- iOS: Added hero trailer playback.\r\n- All: Added a volume boost feature (up to 200%) for quieter streams (volume up gesture can go beyond 100%).\r\n- All: Added support for Live TV integrations.\r\n- All: Added stream quality selection in Player Control.\r\n- All: Added artwork type selection for Hero background.\r\n- All: Added Tap-to-Seek (you can tap on player progress bar to seek forward/backward).\r\n- All: Added in-app debug logs (go to Settings -> Advanced -> Debug Logs).\r\n- All: Changed the \"Play\" button to \"Watch Again\" for already-watched movies to improve tracking clarity.\r\n- All: Added Library Calendar.\r\n- All: Added playback info button.\r\n- All: Added adjustable subtitle background transparency.\r\n- All: Added episode rating toggle in TMDB Enrichment.\r\n- All: Added profile insight page.\r\n\r\n**Bug Fixes:**\r\n- iOS: Fixed persistent home bar on iOS 16-18. \r\n- iOS: Fixed double legacy navbar on iOS 16-18.\r\n- iOS: Fixed animated GIF support for Profile Avatars.\r\n- iOS: Fixed animated GIF support for Stream Badge.\r\n- Android: Fixed status bar visibility\r\n\r\n---\r\n> **💡 Note**\r\nI don’t accept personal donations and my release doesn’t change donation URL. All donations should rightfully go to @tapframe.",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-iOS/releases/download/0.4.0/Nuvio-v0.4.0-Full.ipa",
+          "size": 46190861,
+          "sha256": "0fadb39632aefbffcd4cc1c76b1a7a941b70001e8383a3c1ccb3e59056906389",
+          "minOSVersion": "16.1"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
       }
     }
   ],

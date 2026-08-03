@@ -6,5 +6,21 @@
     "version": "21.30.5",
     "buildVersion": "21.30.5",
     "sha256": "ba9cfa1409ac25e58ffe3a2f85a96dc76debdffa7028478ef19dde9f56238830"
+  },
+  "nuvio-enhanced": {
+    "releaseKey": "357217476:2026-07-21T09:07:38Z",
+    "releaseTag": "enhanced-v0.3.1-build102",
+    "downloadURL": "https://github.com/yesnt10/NuvioMobile-Enhanced/releases/download/enhanced-v0.3.1-build102/Nuvio-Enhanced-v0.3.1-build102-full-unsigned.ipa",
+    "version": "0.3.1",
+    "buildVersion": "102",
+    "sha256": "418109f5999f8a15d52900e863fa94e1a3c4f915fd525a1ae4b2bb84c4161dc4"
+  },
+  "nuvio-full": {
+    "releaseKey": "363574603:2026-08-02T00:58:08Z",
+    "releaseTag": "0.4.0",
+    "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-iOS/releases/download/0.4.0/Nuvio-v0.4.0-Full.ipa",
+    "version": "0.4.0",
+    "buildVersion": "102",
+    "sha256": "0fadb39632aefbffcd4cc1c76b1a7a941b70001e8383a3c1ccb3e59056906389"
   }
 }

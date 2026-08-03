@@ -52,10 +52,14 @@ def latest_release(repository: str) -> dict:
     raise RuntimeError(f"No published stable release found for {repository}")
 
 
-def select_ipa_url(release: dict, allow_body: bool) -> str:
+def select_ipa_url(release: dict, allow_body: bool, asset_pattern: str | None = None) -> str:
+    compiled_pattern = re.compile(asset_pattern, re.IGNORECASE) if asset_pattern else None
     for asset in release.get("assets", []):
         url = asset.get("browser_download_url", "")
-        if urllib.parse.urlparse(url).path.lower().endswith(".ipa"):
+        name = asset.get("name", "")
+        if urllib.parse.urlparse(url).path.lower().endswith(".ipa") and (
+            compiled_pattern is None or compiled_pattern.search(name)
+        ):
             return url
     if allow_body:
         match = IPA_URL_RE.search(release.get("body") or "")
@@ -181,7 +185,19 @@ def update() -> bool:
             generated_apps.append(previous)
             continue
 
-        ipa_url = select_ipa_url(release, app.get("allowReleaseBodyIPA", False))
+        try:
+            ipa_url = select_ipa_url(
+                release,
+                app.get("allowReleaseBodyIPA", False),
+                app.get("ipaAssetPattern"),
+            )
+        except RuntimeError:
+            if app.get("allowMissingIPA"):
+                if previous:
+                    generated_apps.append(previous)
+                print(f"{app['name']}: latest official release has no IPA; entry remains pending")
+                continue
+            raise
         ipa_path = download_ipa(ipa_url)
         try:
             metadata = ipa_metadata(ipa_path)
@@ -193,20 +209,23 @@ def update() -> bool:
         version_identity = (metadata["version"], metadata["buildVersion"])
         known_identities = {(item["version"], item.get("buildVersion", "")) for item in versions}
         if version_identity not in known_identities:
-            versions.insert(
-                0,
-                {
-                    "version": metadata["version"],
-                    "buildVersion": metadata["buildVersion"],
-                    "marketingVersion": f"{app['name']} {release['tag_name']} (YouTube {metadata['version']})",
-                    "date": release["published_at"],
-                    "localizedDescription": release_description(app, release),
-                    "downloadURL": ipa_url,
-                    "size": metadata["size"],
-                    "sha256": metadata["sha256"],
-                    "minOSVersion": metadata["minOSVersion"],
-                },
-            )
+            new_version = {
+                "version": metadata["version"],
+                "buildVersion": metadata["buildVersion"],
+                "date": release["published_at"],
+                "localizedDescription": release_description(app, release),
+                "downloadURL": ipa_url,
+                "size": metadata["size"],
+                "sha256": metadata["sha256"],
+                "minOSVersion": metadata["minOSVersion"],
+            }
+            if template := app.get("marketingVersionTemplate"):
+                new_version["marketingVersion"] = template.format(
+                    releaseTag=release["tag_name"],
+                    version=metadata["version"],
+                    buildVersion=metadata["buildVersion"],
+                )
+            versions.insert(0, new_version)
             changed = True
 
         generated_apps.append(
