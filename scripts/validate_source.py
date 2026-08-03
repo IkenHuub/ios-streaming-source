@@ -123,7 +123,7 @@ def main() -> int:
             print(f"- {error}")
         return 1
     if args.allow_duplicate_bundles:
-        print("VALID: JSON syntax and FlareStore catalog structure passed")
+        print("VALID: JSON syntax and multi-variant catalog structure passed")
     else:
         print("VALID: JSON syntax and AltStore source structure passed")
     return 0

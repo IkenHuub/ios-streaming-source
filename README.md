@@ -8,9 +8,9 @@ A generic AltStore-compatible source for (un)official iOS streaming apps. The so
 https://ikenhuub.github.io/ios-streaming-source/apps.json
 ```
 
-An identical FlareStore alias is available at `https://ikenhuub.github.io/ios-streaming-source/repo.json`.
+An identical full-catalog alias is available at `https://ikenhuub.github.io/ios-streaming-source/repo.json`.
 
-The main `apps.json` catalog shows both Nuvio variants so FlareStore users can choose which one to install. Both variants use `com.nuvio.media`, so installing one replaces the other.
+The main `apps.json` catalog shows every available app and variant so users can choose what to install. APEX and YouTube by lowiqentity share `com.google.ios.youtube`; Nuvio Enhanced and Nuvio Full share `com.nuvio.media`. Installing one app from either pair therefore replaces the other.
 
 ## AltStore-compatible source URLs
 
@@ -35,12 +35,17 @@ Every published app also has an individual source hosted by this repository:
 - `https://ikenhuub.github.io/ios-streaming-source/nuvio-enhanced.json`
 - `https://ikenhuub.github.io/ios-streaming-source/nuvio-full.json`
 
-## Add to FlareStore
+## Add to a sideloading store
 
-1. Open FlareStore and go to **Sources**.
-2. Select **Add Source** or tap the plus button.
-3. Paste `https://ikenhuub.github.io/ios-streaming-source/apps.json`.
-4. Confirm that you want to add the source.
+1. Open your sideloading store and go to **Sources**, **Repos**, or the equivalent section.
+2. Select **Add Source**, **Add Repo**, or tap the plus button.
+3. Paste the source URL appropriate for your client:
+   - use `apps.json` for the complete catalog with every variant;
+   - use `altstore-enhanced.json` or `altstore-full.json` when your client enforces unique bundle identifiers;
+   - use an individual app source when you only want one app.
+4. Confirm the addition and refresh the source.
+
+The JSON format is intended for compatible sideloading stores including FlareStore, Feather, SideStore, and AltStore Classic. Exact menus and support for multiple entries sharing a bundle identifier depend on the client.
 
 ## APEX
 
@@ -68,7 +73,7 @@ Nuvio Enhanced is an actively maintained unofficial build from [`luqmanfadlli/Nu
 
 Nuvio Full is the alternative Full build from [`luqmanfadlli/NuvioMobile-iOS`](https://github.com/luqmanfadlli/NuvioMobile-iOS). This repository links directly to the latest unmodified `-Full.ipa` from its GitHub Releases. Full and Enhanced intentionally appear as separate choices in this source, but both use `com.nuvio.media`; installing one therefore replaces the other.
 
-Both Nuvio variants appear in the main FlareStore catalog. Their individual JSON files remain available for clients that enforce AltStore's unique-bundle-identifier rule.
+Both Nuvio variants appear in the complete catalog. Their individual JSON files remain available for clients that enforce AltStore's unique-bundle-identifier rule.
 
 ## Adding more apps later
 
