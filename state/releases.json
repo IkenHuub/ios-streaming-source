@@ -8,12 +8,12 @@
     "sha256": "7115c5cb683162cfcc6e202e546c53326f21cabafb90d2a529eec8fe1c5b4f2f"
   },
   "nuvio-enhanced": {
-    "releaseKey": "365347061:2026-08-05T10:36:24Z",
-    "releaseTag": "0.4.2",
-    "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-iOS/releases/download/0.4.2/Nuvio-v0.4.2-Enhanced.ipa",
-    "version": "0.4.2",
-    "buildVersion": "106",
-    "sha256": "06b7f37225d712329b880bca6857f41456d2e97b525ca7527ebb88a1f8d3bcfe"
+    "releaseKey": "367691404:2026-08-10T08:14:38Z",
+    "releaseTag": "0.4.3",
+    "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-iOS/releases/download/0.4.3/Nuvio-v0.4.3-Enhanced.ipa",
+    "version": "0.4.3",
+    "buildVersion": "107",
+    "sha256": "5d54e6f2238725712eef781a2ae9c320616c195ce3a4b4e1698676878500aa97"
   },
   "stremio": {
     "releaseKey": "upstream:com.stremio.pal:2.0.6:21:3ff786e83de059293d57378a742c4b70d069fa745133b5f909ea0e060dabf10d",
@@ -24,12 +24,12 @@
     "sha256": "3ff786e83de059293d57378a742c4b70d069fa745133b5f909ea0e060dabf10d"
   },
   "nuvio-full": {
-    "releaseKey": "365347061:2026-08-05T10:36:24Z",
-    "releaseTag": "0.4.2",
-    "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-iOS/releases/download/0.4.2/Nuvio-v0.4.2-Full.ipa",
-    "version": "0.4.2",
-    "buildVersion": "106",
-    "sha256": "f9610f9865228cda774c638bc44ad0fa36358acb38226735752bfc08a06330bd"
+    "releaseKey": "367691404:2026-08-10T08:14:38Z",
+    "releaseTag": "0.4.3",
+    "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-iOS/releases/download/0.4.3/Nuvio-v0.4.3-Full.ipa",
+    "version": "0.4.3",
+    "buildVersion": "107",
+    "sha256": "5b792465506e34889d0c3279ab7db08c124ec7e799cbbb248da109ecfb48fc22"
   },
   "youtube-lowiqentity": {
     "releaseKey": "363874836:2026-08-02T22:30:03Z",
