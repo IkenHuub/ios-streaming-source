@@ -20,6 +20,16 @@
       "category": "entertainment",
       "versions": [
         {
+          "version": "21.32.4",
+          "buildVersion": "21.32.4",
+          "date": "2026-08-10T13:58:38Z",
+          "localizedDescription": "lowiqentity YouTube/lowiqentity/6.1-21.32; verified internal YouTube version 21.32.4.",
+          "downloadURL": "https://github.com/lowiqentity/releases/releases/download/YouTube/lowiqentity/6.1-21.32/YouTube_21.32_lowiqentity_6.1.ipa",
+          "size": 139444476,
+          "sha256": "a23c7471733877d59371d3c2dd941a3823dec78baac8efa46480f955f3ec345d",
+          "minOSVersion": "16.0"
+        },
+        {
           "version": "21.31.3",
           "buildVersion": "21.31.3",
           "date": "2026-08-02T19:28:34Z",

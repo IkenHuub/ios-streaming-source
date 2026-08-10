@@ -32,11 +32,11 @@
     "sha256": "5b792465506e34889d0c3279ab7db08c124ec7e799cbbb248da109ecfb48fc22"
   },
   "youtube-lowiqentity": {
-    "releaseKey": "363874836:2026-08-02T22:30:03Z",
-    "releaseTag": "YouTube/lowiqentity/6.0-21.31",
-    "downloadURL": "https://github.com/lowiqentity/releases/releases/download/YouTube/lowiqentity/6.0-21.31/YouTube_21.31_lowiqentity_6.0.ipa",
-    "version": "21.31.3",
-    "buildVersion": "21.31.3",
-    "sha256": "6ad10f8df25862fea8f2128c77939c5b05e8fe0bafd9d39d30c0cbd272096db4"
+    "releaseKey": "367953545:2026-08-10T13:58:48Z",
+    "releaseTag": "YouTube/lowiqentity/6.1-21.32",
+    "downloadURL": "https://github.com/lowiqentity/releases/releases/download/YouTube/lowiqentity/6.1-21.32/YouTube_21.32_lowiqentity_6.1.ipa",
+    "version": "21.32.4",
+    "buildVersion": "21.32.4",
+    "sha256": "a23c7471733877d59371d3c2dd941a3823dec78baac8efa46480f955f3ec345d"
   }
 }
