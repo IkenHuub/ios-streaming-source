@@ -20,6 +20,17 @@
       "category": "entertainment",
       "versions": [
         {
+          "version": "21.32.4",
+          "buildVersion": "21.32.4",
+          "date": "2026-08-12T06:18:10Z",
+          "localizedDescription": "Fixed:\r\n\r\n - All recent bugs reported.",
+          "downloadURL": "https://files.catbox.moe/hkk4xy.ipa",
+          "size": 135433910,
+          "sha256": "cff5f1863ed17c2724bb88071eb2d5e2d0bf6b226ff5385ba41936d25f827e93",
+          "minOSVersion": "16.0",
+          "marketingVersion": "APEX 0.1.5 (YouTube 21.32.4)"
+        },
+        {
           "version": "21.31.3",
           "buildVersion": "21.31.3",
           "date": "2026-08-09T14:20:59Z",
