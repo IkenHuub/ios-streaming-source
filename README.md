@@ -10,7 +10,7 @@ https://ikenhuub.github.io/ios-streaming-source/apps.json
 
 An identical full-catalog alias is available at `https://ikenhuub.github.io/ios-streaming-source/repo.json`.
 
-The main `apps.json` catalog shows every available app and variant so users can choose what to install. APEX and YouTube by lowiqentity share `com.google.ios.youtube`; Nuvio Enhanced and Nuvio Full share `com.nuvio.media`. Installing one app from either pair therefore replaces the other.
+The main `apps.json` catalog shows every available app and variant so users can choose what to install. Nuvio Enhanced and Nuvio Full share `com.nuvio.media`, so installing one variant replaces the other.
 
 ## AltStore-compatible source URLs
 
@@ -30,7 +30,6 @@ https://ikenhuub.github.io/ios-streaming-source/nuvio-full.json
 Every published app also has an individual source hosted by this repository:
 
 - `https://ikenhuub.github.io/ios-streaming-source/apex.json`
-- `https://ikenhuub.github.io/ios-streaming-source/youtube-lowiqentity.json`
 - `https://ikenhuub.github.io/ios-streaming-source/stremio.json`
 - `https://ikenhuub.github.io/ios-streaming-source/nuvio-enhanced.json`
 - `https://ikenhuub.github.io/ios-streaming-source/nuvio-full.json`
@@ -52,10 +51,6 @@ The JSON format is intended for compatible sideloading stores including FlareSto
 APEX is not developed by the maintainer of this repository. The IPA is neither rehosted nor modified. Its download URL points directly to the official Catbox download published by the APEX developer in the official [GitHub Release](https://github.com/lowiqentity/APEX/releases).
 
 The bundle identifier, app version, build version, minimum iOS version, privacy descriptions, file size, and SHA-256 digest are determined directly from the downloaded IPA.
-
-## YouTube by lowiqentity
-
-This customized YouTube build is linked directly and unmodified from [`lowiqentity/releases`](https://github.com/lowiqentity/releases/releases). It is retained alongside APEX for users who prefer this version. Future releases are not guaranteed now that the developer is also working on APEX.
 
 ## Stremio
 

@@ -8,12 +8,12 @@
     "sha256": "cff5f1863ed17c2724bb88071eb2d5e2d0bf6b226ff5385ba41936d25f827e93"
   },
   "nuvio-enhanced": {
-    "releaseKey": "367691404:2026-08-10T08:14:38Z",
-    "releaseTag": "0.4.3",
-    "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-iOS/releases/download/0.4.3/Nuvio-v0.4.3-Enhanced.ipa",
-    "version": "0.4.3",
-    "buildVersion": "107",
-    "sha256": "5d54e6f2238725712eef781a2ae9c320616c195ce3a4b4e1698676878500aa97"
+    "releaseKey": "369622968:2026-08-13T06:10:17Z",
+    "releaseTag": "0.4.5",
+    "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-iOS/releases/download/0.4.5/Nuvio-v0.4.5-Enhanced.ipa",
+    "version": "0.4.5",
+    "buildVersion": "109",
+    "sha256": "c3e38dd3cd3993edf12b1bcb8faa5dee789e93915852bbdfc401a059f4d1dcf7"
   },
   "stremio": {
     "releaseKey": "upstream:com.stremio.pal:2.0.6:21:3ff786e83de059293d57378a742c4b70d069fa745133b5f909ea0e060dabf10d",
@@ -24,19 +24,11 @@
     "sha256": "3ff786e83de059293d57378a742c4b70d069fa745133b5f909ea0e060dabf10d"
   },
   "nuvio-full": {
-    "releaseKey": "367691404:2026-08-10T08:14:38Z",
-    "releaseTag": "0.4.3",
-    "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-iOS/releases/download/0.4.3/Nuvio-v0.4.3-Full.ipa",
-    "version": "0.4.3",
-    "buildVersion": "107",
-    "sha256": "5b792465506e34889d0c3279ab7db08c124ec7e799cbbb248da109ecfb48fc22"
-  },
-  "youtube-lowiqentity": {
-    "releaseKey": "367953545:2026-08-10T13:58:48Z",
-    "releaseTag": "YouTube/lowiqentity/6.1-21.32",
-    "downloadURL": "https://github.com/lowiqentity/releases/releases/download/YouTube/lowiqentity/6.1-21.32/YouTube_21.32_lowiqentity_6.1.ipa",
-    "version": "21.32.4",
-    "buildVersion": "21.32.4",
-    "sha256": "a23c7471733877d59371d3c2dd941a3823dec78baac8efa46480f955f3ec345d"
+    "releaseKey": "369622968:2026-08-13T06:10:17Z",
+    "releaseTag": "0.4.5",
+    "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-iOS/releases/download/0.4.5/Nuvio-v0.4.5-Full.ipa",
+    "version": "0.4.5",
+    "buildVersion": "109",
+    "sha256": "6ecfd8f066d9711b4f1c00953e983f10d58e9f24351a794f150b5d0caa11f0fc"
   }
 }

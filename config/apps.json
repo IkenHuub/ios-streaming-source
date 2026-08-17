@@ -37,22 +37,6 @@
       "allowReleaseBodyIPA": true
     },
     {
-      "id": "youtube-lowiqentity",
-      "name": "YouTube by lowiqentity",
-      "githubRepository": "lowiqentity/releases",
-      "releaseTagPrefix": "YouTube/lowiqentity/",
-      "developerName": "lowiqentity",
-      "subtitle": "A customized YouTube experience by lowiqentity.",
-      "localizedDescription": "A customized YouTube distribution by lowiqentity, retained alongside APEX for users who prefer this version. Future updates are not guaranteed now that the developer is also working on APEX.",
-      "versionDescriptionTemplate": "lowiqentity {releaseTag}; verified internal YouTube version {version}.",
-      "iconURL": "https://avatars.githubusercontent.com/u/310374126?v=4",
-      "tintColor": "#FF0000",
-      "category": "entertainment",
-      "entitlements": [],
-      "ipaAssetPattern": "\\.ipa$",
-      "isolateHistory": true
-    },
-    {
       "id": "stremio",
       "name": "Stremio",
       "upstreamSourceURL": "https://repo.omix4.one/stremio-ios.json",
