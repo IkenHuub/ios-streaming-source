@@ -23,6 +23,17 @@
       "category": "entertainment",
       "versions": [
         {
+          "version": "21.33.6",
+          "buildVersion": "21.33.6",
+          "date": "2026-08-25T08:50:42Z",
+          "localizedDescription": "Fixed:\r\nLots of shit.",
+          "downloadURL": "https://files.catbox.moe/fxsx2i.ipa",
+          "size": 136233609,
+          "sha256": "e1ab8e7d7fe00608a2f2608fc5a36ba6518243d4ce2270b20d8792f2c847b611",
+          "minOSVersion": "16.0",
+          "marketingVersion": "APEX 0.1.8 (YouTube 21.33.6)"
+        },
+        {
           "version": "21.32.4",
           "buildVersion": "21.32.4",
           "date": "2026-08-12T06:18:10Z",
