@@ -56,17 +56,13 @@ The bundle identifier, app version, build version, minimum iOS version, privacy 
 
 The full-featured Stremio iOS app follows the unofficial [`gorlev/stremio-altstore`](https://github.com/gorlev/stremio-altstore) source published at `https://repo.omix4.one/stremio-ios.json`. The IPA itself is downloaded directly and unmodified from Stremio's public `dl.strem.io` CDN. The updater verifies its bundle identifier, version, build, minimum iOS version, byte size, and SHA-256 digest before publishing it.
 
-## Nuvio
-
-Official Nuvio is monitored through [`NuvioMedia/NuvioMobile`](https://github.com/NuvioMedia/NuvioMobile). Its current releases do not provide an iOS IPA, so it is intentionally kept out of the published source until a directly downloadable official IPA becomes available.
-
 ## Nuvio Enhanced
 
-Nuvio Enhanced is an actively maintained unofficial build from [`luqmanfadlli/NuvioMobile-iOS`](https://github.com/luqmanfadlli/NuvioMobile-iOS). This repository maintains its own source metadata and links directly to the latest unmodified `-Enhanced.ipa` published in that project's GitHub Releases; the upstream raw source JSON is not used for distribution. It uses Nuvio's `com.nuvio.media` bundle identifier, so it may replace or conflict with another Nuvio installation rather than install alongside it.
+Nuvio Enhanced is an actively maintained unofficial build from [`luqmanfadlli/NuvioMobile-Enhanced`](https://github.com/luqmanfadlli/NuvioMobile-Enhanced). This repository maintains its own source metadata and links directly to the latest unmodified `-Enhanced.ipa` published in that project's GitHub Releases. It uses Nuvio's `com.nuvio.media` bundle identifier, so it may replace or conflict with another Nuvio installation rather than install alongside it.
 
 ## Nuvio Full
 
-Nuvio Full is the alternative Full build from [`luqmanfadlli/NuvioMobile-iOS`](https://github.com/luqmanfadlli/NuvioMobile-iOS). This repository links directly to the latest unmodified `-Full.ipa` from its GitHub Releases. Full and Enhanced intentionally appear as separate choices in this source, but both use `com.nuvio.media`; installing one therefore replaces the other.
+Nuvio Full is the official full build from [`NuvioMedia/NuvioMobile`](https://github.com/NuvioMedia/NuvioMobile). This repository links directly to the latest unmodified `full-release.ipa` from the official GitHub Releases. Full and Enhanced intentionally appear as separate choices in this source, but both use `com.nuvio.media`; installing one therefore replaces the other.
 
 Both Nuvio variants appear in the complete catalog. Their individual JSON files remain available for clients that enforce AltStore's unique-bundle-identifier rule.
 

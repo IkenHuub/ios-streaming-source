@@ -1,19 +1,19 @@
 {
   "apex": {
-    "releaseKey": "376263701:2026-08-25T08:50:42Z",
+    "releaseKey": "376263701:2026-08-26T13:58:27Z",
     "releaseTag": "0.1.8",
-    "downloadURL": "https://files.catbox.moe/fxsx2i.ipa",
+    "downloadURL": "https://files.catbox.moe/5bf4vq.ipa",
     "version": "21.33.6",
     "buildVersion": "21.33.6",
-    "sha256": "e1ab8e7d7fe00608a2f2608fc5a36ba6518243d4ce2270b20d8792f2c847b611"
+    "sha256": "4bf573c6126d41886945f917f322c563e582f89e25b13d7a88bca1a6a9fc5107"
   },
   "nuvio-enhanced": {
-    "releaseKey": "375529159:2026-08-24T12:50:54Z",
-    "releaseTag": "0.4.10",
-    "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-iOS/releases/download/0.4.10/Nuvio-v0.4.10-Enhanced.ipa",
-    "version": "0.4.10",
-    "buildVersion": "114",
-    "sha256": "66bd45c142997c698da5db5ef9b06cba61526d962363e9a8edb005240338e9dd"
+    "releaseKey": "379380828:2026-08-31T01:51:47Z",
+    "releaseTag": "0.4.13",
+    "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.4.13/Nuvio-v0.4.13-Enhanced.ipa",
+    "version": "0.4.13",
+    "buildVersion": "117",
+    "sha256": "351db1054f1b4f7701d631459001fc68dcd03888d0ee4eb8df9efcce1f4c1209"
   },
   "stremio": {
     "releaseKey": "upstream:com.stremio.pal:2.0.7:22:cddfe220ce1f0c3befaf29eff9d7c3fe9cdb737bbac4353468169ba0d28b2c0f",
@@ -24,11 +24,11 @@
     "sha256": "cddfe220ce1f0c3befaf29eff9d7c3fe9cdb737bbac4353468169ba0d28b2c0f"
   },
   "nuvio-full": {
-    "releaseKey": "375529159:2026-08-24T12:50:54Z",
-    "releaseTag": "0.4.10",
-    "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-iOS/releases/download/0.4.10/Nuvio-v0.4.10-Full.ipa",
-    "version": "0.4.10",
-    "buildVersion": "114",
-    "sha256": "2070453a0cba9c3156c4e6bf25fe37ea332d2df93fffd1ab59e347e4ca574ea9"
+    "releaseKey": "379365898:2026-08-30T19:14:00Z",
+    "releaseTag": "0.4.13",
+    "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.13/nuvio-0.4.13-full-release.ipa",
+    "version": "0.4.13",
+    "buildVersion": "117",
+    "sha256": "1e4458b0613c6e827459f02b6922d2c06e0e246624a097dac0a80bfc1dfb7c5a"
   }
 }

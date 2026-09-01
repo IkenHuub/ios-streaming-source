@@ -330,15 +330,14 @@ def update() -> bool:
         )
         if version_identity in known_identities:
             print(f"{app['name']}: release changed, but IPA version/build is unchanged; source not updated")
-        else:
-            state[app["id"]] = {
-                "releaseKey": release_key,
-                "releaseTag": release["tag_name"],
-                "downloadURL": ipa_url,
-                "version": metadata["version"],
-                "buildVersion": metadata["buildVersion"],
-                "sha256": metadata["sha256"],
-            }
+        state[app["id"]] = {
+            "releaseKey": release_key,
+            "releaseTag": release["tag_name"],
+            "downloadURL": ipa_url,
+            "version": metadata["version"],
+            "buildVersion": metadata["buildVersion"],
+            "sha256": metadata["sha256"],
+        }
 
     config_by_name = {app["name"]: app for app in config["apps"]}
     main_apps = [

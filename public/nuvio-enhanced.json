@@ -14,11 +14,21 @@
       "bundleIdentifier": "com.nuvio.media",
       "developerName": "NuvioMedia / luqmanfadlli",
       "subtitle": "An actively maintained enhanced Nuvio build.",
-      "localizedDescription": "Nuvio Enhanced is an unofficial community build of NuvioMobile with experimental features, quality-of-life improvements, and additional fixes. This source is maintained independently and links directly to the unmodified Enhanced IPA published in the NuvioMobile-iOS GitHub Releases.",
-      "iconURL": "https://raw.githubusercontent.com/luqmanfadlli/NuvioMobile-iOS/cmp-rewrite/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
+      "localizedDescription": "Nuvio Enhanced is an unofficial community build of NuvioMobile with experimental features, quality-of-life improvements, and additional fixes. This source links directly to the unmodified Enhanced IPA published in the NuvioMobile-Enhanced GitHub Releases.",
+      "iconURL": "https://raw.githubusercontent.com/luqmanfadlli/NuvioMobile-Enhanced/enhanced/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png",
       "tintColor": "#8B5CF6",
       "category": "entertainment",
       "versions": [
+        {
+          "version": "0.4.13",
+          "buildVersion": "117",
+          "date": "2026-08-30T20:46:36Z",
+          "localizedDescription": "## AltStore/SideStore source:\r\n```\r\nhttps://github.com/luqmanfadlli/NuvioMobile-Enhanced/raw/refs/heads/enhanced/store.json\r\n```\r\n\r\n## Upstream changelog:\r\n- feat(details): parse addon certifications @tapframe\r\n- fix(details): parse addon season posters @tapframe\r\n- fix(ui): handle delayed addon content states @tapframe\r\n- fix(android): adjust launcher icon scale @tapframe\r\n- feat(player): apply member gradients to player accents @tapframe\r\n- fix(player): reset subtitle selection on source change (#1812) @guuilp\r\n\r\n## Enhanced changelog:\r\n- All changes from the upstream\r\n- fix(ios): restore native drag overlay on the morphed tab bar @luqmanfadlli\r\n- feat(profiles): push Edit Profile as a native navigation destination @albertovinaroz\r\n- feat(trailer): add configurable hero trailer start delay @luqmanfadlli\r\n- feat(player): hardware keyboard shortcut @luqmanfadlli\r\n- fix(player): stop accidental seek swipes on the player surface @luqmanfadlli\r\n- feat(player): add a Swipe to Seek toggle to playback settings @luqmanfadlli\r\n- feat(details): open the full More Like This list in a paged grid @luqmanfadlli\r\n- fix(profiles): return to Profile Insights after editing a profile @luqmanfadlli",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.4.13/Nuvio-v0.4.13-Enhanced.ipa",
+          "size": 66579308,
+          "sha256": "351db1054f1b4f7701d631459001fc68dcd03888d0ee4eb8df9efcce1f4c1209",
+          "minOSVersion": "16.1"
+        },
         {
           "version": "0.4.10",
           "buildVersion": "114",
