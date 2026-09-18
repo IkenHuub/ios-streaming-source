@@ -139,6 +139,16 @@
       "category": "entertainment",
       "versions": [
         {
+          "version": "0.4.24",
+          "buildVersion": "129",
+          "date": "2026-09-18T19:58:08Z",
+          "localizedDescription": "- feat(trailers): let each hero trailer start with sound @luqmanfadlli\r\n- fix(ios): open the downloads folder in Files @luqmanfadlli\r\n- feat(downloads): add an optional download button to the details screen @luqmanfadlli\r\n- fix(player): remove extra bottom padding on ios @tapframe\r\n- fix(player): remember brightness across playback sessions @tapframe\r\n- fix(player): reset auto-hide timer on control interactions @tapframe\r\n- feat(player): add runtime toggle and adjust control overflow @tapframe\r\n- feat(player): update gesture indicators for new layout @tapframe\r\n- feat(player): follow design parity @tapframe\r\n- feat(theme): apply the accent gradient to icons, accents and buttons @luqmanfadlli\r\n- fix(ios): tint the glass tab bar with the full theme gradient @luqmanfadlli\r\n- feat(livetv): pin search and filters with a sticky header @luqmanfadlli\r\n- perf(ios): cap the mpv demuxer cache to avoid jetsam on 4K HDR @luqmanfadlli\r\n- fix(ios): bundle Latin subtitle font and license @mucahitpe\r\n- fix(ios): stabilize subtitle font resolver @mucahitpe\r\n- feat(settings): add rating visibility controls @tapframe",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.4.24-beta/Nuvio-0.4.24-Enhanced.ipa",
+          "size": 66911481,
+          "sha256": "b5d85c4b3919b324c0d8ed3ae969682ba1874b53915a3cb0e1f396b8be34ffbc",
+          "minOSVersion": "16.1"
+        },
+        {
           "version": "0.4.23",
           "buildVersion": "128",
           "date": "2026-09-17T11:02:10Z",
@@ -334,6 +344,16 @@
       "tintColor": "#18B6A4",
       "category": "entertainment",
       "versions": [
+        {
+          "version": "0.4.24",
+          "buildVersion": "129",
+          "date": "2026-09-18T16:34:38Z",
+          "localizedDescription": "- 042144f8 fix(player): remember brightness across playback sessions @tapframe  \r\n- 2a3bb965 fix(player): reset auto-hide timer on control interactions @tapframe  \r\n- 4c3bd0d0 feat(player): follow design parity @tapframe  \r\n- 6fb46976 feat(settings): add rating visibility controls @tapframe",
+          "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.24-beta/nuvio-0.4.24-full-release.ipa",
+          "size": 51517735,
+          "sha256": "89c458d16340437f9923a0d8e81c5fa6d4ae77be9db5c0f614e73f4ae792b042",
+          "minOSVersion": "16.1"
+        },
         {
           "version": "0.4.23",
           "buildVersion": "128",
