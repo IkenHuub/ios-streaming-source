@@ -23,6 +23,17 @@
       "category": "entertainment",
       "versions": [
         {
+          "version": "21.39.4",
+          "buildVersion": "21.39.4",
+          "date": "2026-09-29T04:52:27Z",
+          "localizedDescription": "Fixed:\r\nMultiple fixes, won't be addressing as I did not open-source anything.\r\nIn future, I will only stick to stable release and not chasing every YouTube's update. In other words, true features or enhancements by YouTube and not just patching the way how ads showed up.",
+          "downloadURL": "https://files.catbox.moe/l92jw1.ipa",
+          "size": 142427538,
+          "sha256": "04019645d96f7f18ae1690119a16dd2dc559a91438c8461096d606ac50afd8d1",
+          "minOSVersion": "17.0",
+          "marketingVersion": "APEX 0.2.0 (YouTube 21.39.4)"
+        },
+        {
           "version": "21.33.6",
           "buildVersion": "21.33.6",
           "date": "2026-08-25T08:50:42Z",

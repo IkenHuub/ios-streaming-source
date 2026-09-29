@@ -1,11 +1,11 @@
 {
   "apex": {
-    "releaseKey": "376263701:2026-08-26T13:58:27Z",
-    "releaseTag": "0.1.8",
-    "downloadURL": "https://files.catbox.moe/5bf4vq.ipa",
-    "version": "21.33.6",
-    "buildVersion": "21.33.6",
-    "sha256": "4bf573c6126d41886945f917f322c563e582f89e25b13d7a88bca1a6a9fc5107"
+    "releaseKey": "398832960:2026-09-29T04:52:27Z",
+    "releaseTag": "0.2.0",
+    "downloadURL": "https://files.catbox.moe/l92jw1.ipa",
+    "version": "21.39.4",
+    "buildVersion": "21.39.4",
+    "sha256": "04019645d96f7f18ae1690119a16dd2dc559a91438c8461096d606ac50afd8d1"
   },
   "nuvio-enhanced": {
     "releaseKey": "398088253:2026-09-28T10:25:25Z",
