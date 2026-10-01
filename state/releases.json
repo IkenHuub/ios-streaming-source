@@ -8,12 +8,12 @@
     "sha256": "04019645d96f7f18ae1690119a16dd2dc559a91438c8461096d606ac50afd8d1"
   },
   "nuvio-enhanced": {
-    "releaseKey": "398088253:2026-09-28T10:25:25Z",
-    "releaseTag": "0.5.4-beta",
-    "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.5.4-beta/Nuvio-0.5.4-Enhanced.ipa",
-    "version": "0.5.4",
-    "buildVersion": "136",
-    "sha256": "f91bdec1f840041cff4e7ad54d66c0698a451dc0232aab2af32954f0a6abaffd"
+    "releaseKey": "400680331:2026-10-01T05:54:34Z",
+    "releaseTag": "0.5.5-beta",
+    "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.5.5-beta/Nuvio-0.5.5-Enhanced.ipa",
+    "version": "0.5.5",
+    "buildVersion": "137",
+    "sha256": "a1891e0ceeb55fc96637b547800b03f11ff324486463d6fd5164fa352939778a"
   },
   "stremio": {
     "releaseKey": "upstream:com.stremio.pal:2.0.8:23:a98c31059825132e64b5ef73e9fd525411803d437f1920a0da73633ebd6d8319",
