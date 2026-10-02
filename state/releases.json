@@ -24,11 +24,11 @@
     "sha256": "a98c31059825132e64b5ef73e9fd525411803d437f1920a0da73633ebd6d8319"
   },
   "nuvio-full": {
-    "releaseKey": "400366484:2026-09-30T19:22:54Z",
-    "releaseTag": "0.5.5-beta",
-    "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.5.5-beta/nuvio-0.5.5-full-release.ipa",
-    "version": "0.5.5",
-    "buildVersion": "137",
-    "sha256": "ae4da6ce2738ea36e700b3774e0137dae5b0885d7d88ac46c6720b3be3c82433"
+    "releaseKey": "401811098:2026-10-02T12:45:05Z",
+    "releaseTag": "0.5.6-beta",
+    "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.5.6-beta/nuvio-0.5.6-full-release.ipa",
+    "version": "0.5.6",
+    "buildVersion": "138",
+    "sha256": "503a38bb00d29c05d4d6b89443faf9c5004fbd0cd6496e177e0cb1b4dcd0ce4c"
   }
 }
