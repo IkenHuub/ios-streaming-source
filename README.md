@@ -19,7 +19,7 @@ AltStore Classic, SideStore, and other clients that enforce unique bundle identi
 - Enhanced catalog: `https://ikenhuub.github.io/ios-streaming-source/altstore-enhanced.json`
 - Full catalog: `https://ikenhuub.github.io/ios-streaming-source/altstore-full.json`
 
-Both contain APEX and Stremio. Choose which Nuvio variant you want included. These catalogs pass strict AltStore source validation.
+Both contain APEX and Stremio. Choose which Nuvio variant you want included. These catalogs enforce unique bundle identifiers and pass this repository's structural validator. Actual client compatibility still requires an on-device test.
 
 The individual Nuvio Full source is:
 
@@ -50,7 +50,7 @@ The JSON format is intended for compatible sideloading stores including FlareSto
 
 APEX is not developed by the maintainer of this repository. The IPA is neither rehosted nor modified. Its download URL points directly to the official Catbox download published by the APEX developer in the official [GitHub Release](https://github.com/lowiqentity/APEX/releases).
 
-The bundle identifier, app version, build version, minimum iOS version, privacy descriptions, file size, and SHA-256 digest are determined directly from the downloaded IPA.
+The bundle identifier, app version, build version, minimum iOS version, privacy descriptions, file size, and SHA-256 digest are determined directly from the downloaded IPA. The icon comes from the official repository's `assets/repo_icon.png`.
 
 ## Stremio
 
@@ -68,6 +68,38 @@ Both Nuvio variants appear in the complete catalog. Their individual JSON files 
 
 ## Adding more apps later
 
-Each app has its own entry in [`config/apps.json`](config/apps.json). The generic updater processes that configuration, checks the latest official GitHub Release, downloads the IPA for inspection only, and adds a version only when `CFBundleShortVersionString` or `CFBundleVersion` is new. The IPA itself is never stored in this repository.
+Each app has its own entry in [`config/apps.json`](config/apps.json). The generic updater processes that configuration, checks the latest permitted GitHub Release (or the configured upstream source), and downloads new or changed IPAs for inspection only. New version/build pairs are added; republished builds have their download metadata refreshed without duplicating the version. Each app declares its permitted download hosts, and GitHub assets must belong to its configured repository. The IPA itself is never stored in this repository.
 
 The updater runs every six hours and can also be started manually through GitHub Actions.
+
+## Update and verification behavior
+
+The repository is now named `ios-streaming-source`. The old `ios-app-source` URL is unavailable; use the URLs above.
+
+- Scheduled updates run at minute 17 of every sixth hour, in UTC. GitHub may delay scheduled runs.
+- GitHub drafts and releases marked as prereleases are excluded. Nuvio currently publishes `-beta` tags with GitHub's prerelease flag unset; their current marketing versions retain the beta tag so it is visible in the catalog.
+- Nuvio Enhanced accepts both historical `-enhanced.ipa` and current `-enhanced-release.ipa` filenames. A missing IPA now fails the run instead of silently leaving an old version in place.
+- Each new or changed IPA is checked for ZIP integrity. Required metadata, privacy usage descriptions, exact byte size and SHA-256 come from that downloaded file. Entitlements remain explicitly configured; they are not extracted from code signatures by this tool.
+- Release metadata, asset changes and the selected download URL invalidate the cache. An unchanged release does not redownload the IPA on each scheduled run. Use the manual **Update apps** workflow's **refresh** option for a complete recheck.
+- All generated catalogs are structurally validated before writing. Historical versions are retained, deduplicated by version/build, and sorted by publication date.
+- Tests run before updates and on pushes/pull requests. Actions are pinned to official commit SHAs; Dependabot checks them weekly.
+- Pages deploys after a successful updater run, including updates committed using `GITHUB_TOKEN`. The deployment verifies all eight public JSON responses against the checked-out catalogs, their JSON content type, icons, and the current IPA ZIP headers.
+
+Local commands (Python 3.10 or later, standard library only):
+
+```sh
+python3 -m unittest discover -s tests -v
+python3 scripts/update_source.py
+python3 scripts/update_source.py --refresh
+python3 scripts/validate_source.py --allow-duplicate-bundles public/apps.json
+python3 scripts/validate_source.py --remote --allow-duplicate-bundles public/apps.json
+python3 scripts/verify_publication.py
+```
+
+`--remote` checks icons and all historical IPA links using small GET requests. A ZIP header alone is not a complete IPA integrity check; `--refresh` downloads and checks each current archive. GitHub API calls can use `GITHUB_TOKEN` to avoid the unauthenticated rate limit; the token is sent only to `api.github.com`.
+
+## Compatibility and responsibility
+
+This is the classic AltStore source JSON format for sideloading, not AltStore PAL or an Apple alternative marketplace manifest. The complete catalog intentionally includes two Nuvio entries with the same bundle identifier. Use a compatible variant catalog if your client requires unique identifiers.
+
+The maintainer does not develop APEX, Stremio, or Nuvio. IPA files are neither modified nor rehosted here. Users are responsible for signing, sideloading, and their use of the apps. Automated checks validate metadata and delivery; they do not establish that an app installs or works in FlareStore on a physical device.

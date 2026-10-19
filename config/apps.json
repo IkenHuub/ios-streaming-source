@@ -5,20 +5,29 @@
     "subtitle": "Official and unofficial iOS streaming app distributions.",
     "description": "A generic AltStore-compatible source for (un)official iOS streaming apps.",
     "website": "https://github.com/IkenHuub/ios-streaming-source",
-    "tintColor": "#FF0033"
+    "tintColor": "#FF0033",
+    "sourceURL": "https://ikenhuub.github.io/ios-streaming-source/apps.json"
   },
   "compatibleSources": [
     {
       "filename": "altstore-enhanced.json",
       "name": "IkenHuub iOS Streaming Source — Enhanced",
       "subtitle": "AltStore-compatible catalog with Nuvio Enhanced.",
-      "appIds": ["apex", "stremio", "nuvio-enhanced"]
+      "appIds": [
+        "apex",
+        "stremio",
+        "nuvio-enhanced"
+      ]
     },
     {
       "filename": "altstore-full.json",
       "name": "IkenHuub iOS Streaming Source — Full",
       "subtitle": "AltStore-compatible catalog with Nuvio Full.",
-      "appIds": ["apex", "stremio", "nuvio-full"]
+      "appIds": [
+        "apex",
+        "stremio",
+        "nuvio-full"
+      ]
     }
   ],
   "apps": [
@@ -29,12 +38,16 @@
       "developerName": "lowiqentity",
       "subtitle": "A customized YouTube experience for iOS.",
       "localizedDescription": "APEX is a customized YouTube app for iOS. This source links exclusively to the unmodified IPA published by the APEX developer in the official GitHub Release.",
-      "iconURL": "https://avatars.githubusercontent.com/u/310374126?v=4",
+      "iconURL": "https://raw.githubusercontent.com/lowiqentity/APEX/main/assets/repo_icon.png",
       "tintColor": "#FF0033",
       "category": "entertainment",
       "entitlements": [],
       "marketingVersionTemplate": "APEX {releaseTag} (YouTube {version})",
-      "allowReleaseBodyIPA": true
+      "allowReleaseBodyIPA": true,
+      "allowedDownloadHosts": [
+        "github.com",
+        "files.catbox.moe"
+      ]
     },
     {
       "id": "stremio",
@@ -47,7 +60,10 @@
       "iconURL": "https://repo.omix4.one/assets/stremio-icon.png",
       "tintColor": "#7055D9",
       "category": "entertainment",
-      "entitlements": []
+      "entitlements": [],
+      "allowedDownloadHosts": [
+        "dl.strem.io"
+      ]
     },
     {
       "id": "nuvio-enhanced",
@@ -60,10 +76,13 @@
       "tintColor": "#8B5CF6",
       "category": "entertainment",
       "entitlements": [],
-      "ipaAssetPattern": "-Enhanced\\.ipa$",
-      "allowMissingIPA": true,
+      "ipaAssetPattern": "-enhanced(?:-release)?\\.ipa$",
       "isolateHistory": true,
-      "resetHistoryOnBundleChange": true
+      "resetHistoryOnBundleChange": true,
+      "allowedDownloadHosts": [
+        "github.com"
+      ],
+      "marketingVersionTemplate": "{releaseTag}"
     },
     {
       "id": "nuvio-full",
@@ -77,8 +96,11 @@
       "category": "entertainment",
       "entitlements": [],
       "ipaAssetPattern": "full-release\\.ipa$",
-      "allowMissingIPA": true,
-      "isolateHistory": true
+      "isolateHistory": true,
+      "allowedDownloadHosts": [
+        "github.com"
+      ],
+      "marketingVersionTemplate": "{releaseTag}"
     }
   ]
 }

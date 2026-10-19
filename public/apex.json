@@ -5,6 +5,7 @@
   "description": "A generic AltStore-compatible source for (un)official iOS streaming apps.",
   "website": "https://github.com/IkenHuub/ios-streaming-source",
   "tintColor": "#FF0033",
+  "sourceURL": "https://ikenhuub.github.io/ios-streaming-source/apex.json",
   "featuredApps": [
     "com.google.ios.youtube"
   ],
@@ -15,7 +16,7 @@
       "developerName": "lowiqentity",
       "subtitle": "A customized YouTube experience for iOS.",
       "localizedDescription": "APEX is a customized YouTube app for iOS. This source links exclusively to the unmodified IPA published by the APEX developer in the official GitHub Release.",
-      "iconURL": "https://avatars.githubusercontent.com/u/310374126?v=4",
+      "iconURL": "https://raw.githubusercontent.com/lowiqentity/APEX/main/assets/repo_icon.png",
       "tintColor": "#FF0033",
       "category": "entertainment",
       "versions": [

@@ -5,6 +5,7 @@
   "description": "A generic AltStore-compatible source for (un)official iOS streaming apps.",
   "website": "https://github.com/IkenHuub/ios-streaming-source",
   "tintColor": "#FF0033",
+  "sourceURL": "https://ikenhuub.github.io/ios-streaming-source/nuvio-full.json",
   "featuredApps": [
     "com.nuvio.media"
   ],
@@ -27,7 +28,8 @@
           "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.6.2-beta/nuvio-0.6.2-full-release.ipa",
           "size": 68666779,
           "sha256": "99d318c5882d53ec644c09cbde852c6b45649cc20e8452f457e6e88b0bae5eb2",
-          "minOSVersion": "16.1"
+          "minOSVersion": "16.1",
+          "marketingVersion": "0.6.2-beta"
         },
         {
           "version": "0.6.1",

@@ -2,22 +2,25 @@
   "apex": {
     "releaseKey": "398832960:2026-09-29T04:52:27Z",
     "releaseTag": "0.2.0",
+    "assetsKey": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "downloadURL": "https://files.catbox.moe/l92jw1.ipa",
     "version": "21.39.4",
     "buildVersion": "21.39.4",
     "sha256": "04019645d96f7f18ae1690119a16dd2dc559a91438c8461096d606ac50afd8d1"
   },
   "nuvio-enhanced": {
-    "releaseKey": "409288743:2026-10-11T01:54:54Z",
-    "releaseTag": "0.5.9-beta",
-    "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.5.9-beta/nuvio-0.5.9-enhanced.ipa",
-    "version": "0.5.9",
-    "buildVersion": "141",
-    "sha256": "fa9f5ef32da502798de893fa46155cb1b4cd29df2c46b01e72ea8bac026b7adc"
+    "releaseKey": "416870187:2026-10-19T04:08:19Z",
+    "releaseTag": "0.6.2-beta",
+    "assetsKey": "29ed85a153f731cb2a1bc8541816308f21990e26d2dcc291eb085faf82d82ef2",
+    "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.6.2-beta/nuvio-0.6.2-enhanced-release.ipa",
+    "version": "0.6.2",
+    "buildVersion": "145",
+    "sha256": "57407deb12690668657b486fa36f2eb5a0dce10c2a53d0f8b8299241d06d7082"
   },
   "stremio": {
     "releaseKey": "upstream:com.stremio.pal:2.0.8:23:a98c31059825132e64b5ef73e9fd525411803d437f1920a0da73633ebd6d8319",
     "releaseTag": "2.0.8",
+    "assetsKey": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "downloadURL": "https://dl.strem.io/apple/2.0.8b23/ios/stremio_iOS.ipa",
     "version": "2.0.8",
     "buildVersion": "23",
@@ -26,6 +29,7 @@
   "nuvio-full": {
     "releaseKey": "416726434:2026-10-18T23:13:01Z",
     "releaseTag": "0.6.2-beta",
+    "assetsKey": "e95823c37b618fe3a68911cfc579290b4e19a56bf16301026eaf5bd81d1517f3",
     "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.6.2-beta/nuvio-0.6.2-full-release.ipa",
     "version": "0.6.2",
     "buildVersion": "145",
