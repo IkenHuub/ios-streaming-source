@@ -105,6 +105,16 @@
       "category": "entertainment",
       "versions": [
         {
+          "version": "2.1.0",
+          "buildVersion": "24",
+          "date": "2026-10-21",
+          "localizedDescription": "Stremio 2.1.0 (build 24).",
+          "downloadURL": "https://dl.strem.io/apple/2.1.0b24/ios/stremio_iOS.ipa",
+          "size": 84705521,
+          "sha256": "8695db7170e8a7e3976556355cf0e27e3834905ab8559d2cc5203fb20e25eef4",
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "2.0.8",
           "buildVersion": "23",
           "date": "2026-09-11",
