@@ -9,13 +9,13 @@
     "sha256": "04019645d96f7f18ae1690119a16dd2dc559a91438c8461096d606ac50afd8d1"
   },
   "nuvio-enhanced": {
-    "releaseKey": "416870187:2026-10-19T04:08:19Z",
-    "releaseTag": "0.6.2-beta",
-    "assetsKey": "29ed85a153f731cb2a1bc8541816308f21990e26d2dcc291eb085faf82d82ef2",
-    "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.6.2-beta/nuvio-0.6.2-enhanced-release.ipa",
-    "version": "0.6.2",
-    "buildVersion": "145",
-    "sha256": "57407deb12690668657b486fa36f2eb5a0dce10c2a53d0f8b8299241d06d7082"
+    "releaseKey": "419084412:2026-10-21T04:26:46Z",
+    "releaseTag": "0.6.3-beta",
+    "assetsKey": "80b5f22e1e00f0ede4865a8a7148245887a718e832885c78cc0ac6ea6b6acc4c",
+    "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-Enhanced/releases/download/0.6.3-beta/nuvio-0.6.3-enhanced-release.ipa",
+    "version": "0.6.3",
+    "buildVersion": "146",
+    "sha256": "b5a39aa61b2d2740527bc266c5eab2d34247738e99351bb25a7c244ee8ef9998"
   },
   "stremio": {
     "releaseKey": "upstream:com.stremio.pal:2.0.8:23:a98c31059825132e64b5ef73e9fd525411803d437f1920a0da73633ebd6d8319",
@@ -27,12 +27,12 @@
     "sha256": "a98c31059825132e64b5ef73e9fd525411803d437f1920a0da73633ebd6d8319"
   },
   "nuvio-full": {
-    "releaseKey": "416726434:2026-10-18T23:13:01Z",
-    "releaseTag": "0.6.2-beta",
-    "assetsKey": "e95823c37b618fe3a68911cfc579290b4e19a56bf16301026eaf5bd81d1517f3",
-    "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.6.2-beta/nuvio-0.6.2-full-release.ipa",
-    "version": "0.6.2",
-    "buildVersion": "145",
-    "sha256": "99d318c5882d53ec644c09cbde852c6b45649cc20e8452f457e6e88b0bae5eb2"
+    "releaseKey": "419090788:2026-10-21T04:42:34Z",
+    "releaseTag": "0.6.3-beta",
+    "assetsKey": "b7b88507a46cc6e757d6f71d5aa8fd5a5a525113e0b53b2855b01752f41a5d6e",
+    "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.6.3-beta/nuvio-0.6.3-full-release.ipa",
+    "version": "0.6.3",
+    "buildVersion": "146",
+    "sha256": "90cccaa6bfe194c0567e0eb763a2aa65c2fd32ea84660eab18ef336b83558640"
   }
 }
