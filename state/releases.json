@@ -18,13 +18,13 @@
     "sha256": "0c0c21e5296c824c1b4fbe8e4890778a38ab757e3ddf572c61971f996336f050"
   },
   "stremio": {
-    "releaseKey": "upstream:com.stremio.pal:2.1.1:25:1182428e8ba369e7f048fa1651b374a49ff6801e8f35350d0f95d78a41a067d6",
-    "releaseTag": "2.1.1",
+    "releaseKey": "upstream:com.stremio.pal:2.1.2:27:6e4126bc1afeaf5bb9abd97c230a341e2eecf26e37b0ed41ce5b5852e39bd37a",
+    "releaseTag": "2.1.2",
     "assetsKey": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "downloadURL": "https://dl.strem.io/apple/2.1.1b25/ios/stremio_iOS.ipa",
-    "version": "2.1.1",
-    "buildVersion": "25",
-    "sha256": "1182428e8ba369e7f048fa1651b374a49ff6801e8f35350d0f95d78a41a067d6"
+    "downloadURL": "https://dl.strem.io/apple/2.1.2b27/ios/stremio_iOS.ipa",
+    "version": "2.1.2",
+    "buildVersion": "27",
+    "sha256": "6e4126bc1afeaf5bb9abd97c230a341e2eecf26e37b0ed41ce5b5852e39bd37a"
   },
   "nuvio-full": {
     "releaseKey": "446190386:2026-11-15T18:29:58Z",
